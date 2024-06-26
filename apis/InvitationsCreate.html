@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>ID Factory</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="../js/scripts.js" defer></script>
+</head>
+
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="">ID Factory</a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <!-- sidebar-header  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="../index.html">
+                                <i class="fa fa-book"></i>
+                                <span>Glosary</span>
+                            </a>
+                        </li>
+                        <li class="header-menu">
+                            <span>SDK flows</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-circle"></i>
+                                <span>Enroll</span>
+                                <!-- <span class="badge badge-pill badge-warning">New</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="../flujos/FlujoGeneralEnroll.html">General
+                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/FlujoGeneralEnrollEcuador.html">Ecuador</a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/FlujoGeneralEnrollPeru.html">Perú</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="../flujos/Verify.html">
+                                <i class="fa fa-circle"></i>
+                                <span>Verify</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                        </li>
+                        <li class="header-menu">
+                            <span>Web flows</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-square"></i>
+                                <span>Enroll</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="../flujos/flujoGeneralWeb.html">Web page
+                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/EcuadorWeb.html">Components for image</a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/EcuadorWeb.html">Components for web page</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-square"></i>
+                                <span>Verify</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="../flujos/flujoGeneralWeb.html">Por definir
+                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/EcuadorWeb.html">Por definir</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu">
+                            <span>Api's</span>
+                        </li>
+                        <li>
+                            <a href="AuthorizationGetToken.html">
+                                <i class="fa fa-book"></i>
+                                <span>AuthorizationGetToken</span>
+                                <!--<span class="badge badge-pill badge-primary">Beta</span> -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Back.html">
+                                <i class="fa fa-book"></i>
+                                <span>Back</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Close.html">
+                                <i class="fa fa-book"></i>
+                                <span>Close</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="FindByNumberIdSucces.html">
+                                <i class="fa fa-book"></i>
+                                <span>FindByNumberIdSucces</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Front.html">
+                                <i class="fa fa-book"></i>
+                                <span>Front</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="InvitationsCreate.html">
+                                <i class="fa fa-book"></i>
+                                <span>InvitationsCreate</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="New.html">
+                                <i class="fa fa-book"></i>
+                                <span>New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="SendMessages.html">
+                                <i class="fa fa-book"></i>
+                                <span>SendMessages</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Validation{id}.html">
+                                <i class="fa fa-book"></i>
+                                <span>Validation{id}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Verify.html">
+                                <i class="fa fa-book"></i>
+                                <span>Verify</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- sidebar-wrapper  -->
+        <main class="page-content">
+            <div class="container-fluid">
+                <h2>InvitationsCreate Api <span class="badge badge-pill badge-success">POST</span></h2>
+                <hr>
+                <h3>Request</h3>
+                <div class="form-group col-md-12">
+                    <table id="glosary">
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                            <th>Description</th>
+                            <th>Values</th>
+                        </tr>
+                        <tr>
+                            <td>SubCustomer</td>
+                            <td>string</td>
+                            <td>Yes</td>
+                            <td>This field receives the name of the customer with whom the invitation will be made to be
+                                registered in the system.</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>StartDate</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>This field receives the start date of the invitation.</td>
+                            <td>2023/01/01 16:44:30</td>
+                        </tr>
+                        <tr>
+                            <td>FinishDate</td>
+                            <td>string</td>
+                            <td>Yes</td>
+                            <td>This field receives the end date of the invitation.</td>
+                            <td>2023/12/30 16:44:30</td>
+                        </tr>
+                        <tr>
+                            <td>AutomaticAuthorization</td>
+                            <td>boolean</td>
+                            <td>Yes</td>
+                            <td>Defines whether the invitation is automatically authorized by the system.</td>
+                            <td>True o false</td>
+                        </tr>
+                        <tr>
+                            <td>AuthenticationInsite</td>
+                            <td>boolean</td>
+                            <td>No</td>
+                            <td> Define if the url will be performed with only the place id and the callback or if it
+                                will be performed with the user information and the sent steps.</td>
+                            <td>True o false</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>Email associated to the user who creates the invitation </td>
+                            <td>maxLength: 200
+                                    <br>minLength: 0
+                                    <br>pattern:
+                                    ^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IdNumber</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>number of the user creating the invitation</td>
+                            <td>maxLength: 2147483647</td>
+                        </tr>
+                        <tr>
+                            <td>FirstName</td>
+                            <td>integer($int32)</td>
+                            <td>No</td>
+                            <td>First name of the user creating the invitation.</td>
+                            <td>maxLength: 2147483647</td>
+                        </tr>
+                        <tr>
+                            <td>SecondName</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>Second name of the user creating the invitation</td>
+                            <td>maxLength: 2147483647</td>
+                        </tr>
+                        <tr>
+                            <td>FirstSurname</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>First last name of the user creating the invitation</td>
+                            <td>maxLength: 2147483647</td>
+                        </tr>
+                        <tr>
+                            <td>SecondSurname</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>last name of the user creating the invitation</td>
+                            <td>maxLength: 2147483647</td>
+                        </tr>
+                        <tr>
+                            <td>CallBack</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>Redirection URL at the end of invitation creation</td>
+                            <td>maxLength: 400
+                                <br>minLength: 0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>NumberPhone</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>Phone number of the user creating the invitation</td>
+                            <td>maxLength: 400
+                                br>minLength: 0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IsEmployee</td>
+                            <td>boolean</td>
+                            <td>No</td>
+                            <td>Define whether you are an employee or not</td>
+                            <td>True o false</td>
+                        </tr>
+                        <tr>
+                            <td>IsOpen</td>
+                            <td>boolean</td>
+                            <td>No</td>
+                            <td>Defines whether the invitation is open or not</td>
+                            <td>True o false</td>
+                        </tr>
+                        <tr>
+                            <td>TemplatesIds</td>
+                            <td>[integer($int32)]</td>
+                            <td>No</td>
+                            <td>Id of the templates associated to the invitation.</td>
+                            <td>Returns an integer</td>
+                        </tr>
+                        <tr>
+                            <td>Steps</td>
+                            <td>xml: OrderedMap { "name": "OrderSteps", "wrapped": true }</td>
+                            <td>No</td>
+                            <td>List of steps for the enrollment process</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Order</td>
+                            <td>integer($int32)</td>
+                            <td>No</td>
+                            <td>Defines the order in which the process steps are to be executed</td>
+                            <td>Returns an integer</td>
+                        </tr>
+                        <tr>
+                            <td>Step</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>Defines the step to be executed in the process.</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>Csid</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>Defines the session identifier for each client</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>SendEmail</td>
+                            <td>boolean</td>
+                            <td>Yes</td>
+                            <td>Defines whether to send e-mail with invitation link</td>
+                            <td>True or false</td>
+                        </tr>
+                        <tr>
+                            <td>SendSms</td>
+                            <td>boolean</td>
+                            <td>Yes</td>
+                            <td>Define text message is sent with invitation link</td>
+                            <td>True or false</td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h3>InvitationsApiModelV2</h3>
+                        <ul class="sin-viñetas">
+                            <li>{</li>
+                            <li><u>SubCustomer*</u>: string</li>
+                            <li><u>StartDate*</u>: string</li>
+                            <li><u>FinishDate*</u>: string</li>
+                            <li><u>AutomaticAuthorization*</u>: boolean</li>
+                            <li><u>AuthenticationInsite</u>: boolean</li>
+                            <li><u>Email</u>: string
+                                <ul class="sin-viñetas">
+                                    <li>maxLength: 200</li>
+                                    <li>minLength: 0</li>
+                                    li>pattern:
+                                    ^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$
+                            </li>
+                        </ul>
+                        </li>
+                        <li><u>IdNumber</u>: string
+                            <ul class="sin-viñetas">
+                                <li>maxLength: 2147483647</li>
+                            </ul>
+                        </li>
+                        <li><u>FirstName</u>: string
+                            <ul class="sin-viñetas">
+                                <li>maxLength: 2147483647</li>
+                            </ul>
+                        </li>
+                        <li><u>SecondName</u>: string
+                            <ul class="sin-viñetas">
+                                <li>maxLength: 2147483647</li>
+                            </ul>
+                        </li>
+                        <li><u>FirstSurname</u>: string
+                            <ul class="sin-viñetas">
+                                <li>maxLength: 2147483647</li>
+                            </ul>
+                        </li>
+                        <li><u>SecondSurname</u>: string
+                            <ul class="sin-viñetas">
+                                <li>maxLength: 2147483647</li>
+                            </ul>
+                        </li>
+                        <li><u>CallBack</u>: string
+                            <ul class="sin-viñetas">
+                                <li>maxLength: 400</li>
+                                <li>minLength: 0</li>
+                            </ul>
+                        </li>
+                        <li><u>NumberPhone</u>: string
+                            <ul class="sin-viñetas">
+                                <li>maxLength: 400</li>
+                                <li>minLength: 0</li>
+                            </ul>
+                        </li>
+                        <li><u>IsEmployee</u>: boolean</li>
+                        <li><u>IsOpen</u>: boolean</li>
+                        <li><u>TemplatesIds</u>: [integer($int32)]</li>
+                        <li><u>Steps</u>: [
+                            <ul class="sin-viñetas">
+                                <li>xml: OrderedMap { "name": "OrderSteps", "wrapped": true }</li>
+                                <h5>OrderSteps{</h5>
+                                <li><u>ORder</u>: integer($int32)</li>
+                                <li><u>Step</u>: string
+                                    <ul class="sin-viñetas">
+                                        <h5>Enum:</h5>
+                                        <li>[ SELFIE, ID, CONSENT ]</li>
+                                    </ul>
+                                </li>
+                                <li>}]</li>
+                            </ul>
+                        </li>
+                        <li><u>Csid</u>: string</li>
+                        <li><u>SendEmail*</u>: boolean</li>
+                        <li><u>SendSms*</u>: boolean</li>
+                        <li><u>Images</u>: [
+                            <ul class="sin-viñetas">
+                                <li>xml: OrderedMap { "name": "Images", "wrapped": true }</li>
+                                <h5>Images{</h5>
+                                <li><u>ImageType</u>: string
+                                    <ul class="sin-viñetas">
+                                        <h5>Enum:</h5>
+                                        <li>[ DOCUMENT_FACE_1, DOCUMENT_FACE_2, CUSTOMER_PHOTO ]</li>
+                                        <li><u>Value</u>: string</li>
+                                    </ul>
+                                </li>
+                                <li>}]</li>
+                            </ul>
+                        </li>
+                        <li><u>RiskId</u>: integer($int32)</li>
+                        <li>}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr>
+                <h3>Response</h3>
+                <h5>200</h5>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <ul>
+                            <p>This service does not return code 200</p>
+                        </ul>
+                    </div>
+                </div>
+                <h5>201</h5>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <ul class="sin-viñetas">
+                            <p>A new resource has been created</p>
+                            <h6>Example value</h6>
+                            <ul class="sin-viñetas">
+                                <li>{</li>
+                                <li>"Status": "SUCCESS",</li>
+                                <li>"Message": "string",</li>
+                                <li>"Response": {}</li>
+                                <li>}</li>
+                            </ul>
+                            <br>
+                            <h6>ResultOfObject</h6>
+                            <ul class="sin-viñetas">
+                                <li>{</li>
+                                <li><u>Status</u>: string,
+                                    <ul class="sin-viñetas">
+                                        <li>Enum:</li>
+                                        <li>
+                                            [ SUCCESS, ERROR, WARNING, SUCCESS_WITH_WARN, NO_RESULT,
+                                            LOCATION_NOT_VALID,
+                                            EXTRACT_NOT_SUCESS ]
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><u>Message</u>: string</li>
+                                <li><u>Response</u>: string
+                                    <ul class="sin-viñetas">
+                                        <li>{</li>
+                                        <li>}</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <li>}</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <hr>
+                <h3>Exception codes</h3>
+                <h5>400</h5>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <ul>
+                            <p>The validation process was not successful</p>
+                        </ul>
+                    </div>
+                </div>
+                <h5>401</h5>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <ul>
+                            <p>The token authentication process was not successful</p>
+                        </ul>
+                    </div>
+                </div>
+                <h5>500</h5>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <ul>
+                            <p>An error has occurred on the server</p>
+                            <h6>Example value</h6>
+                            <ul class="sin-viñetas">
+                                <li>{</li>
+                                <li>"Status": "SUCCESS",</li>
+                                <li>"Message": "string",</li>
+                                <li>"Response": {}</li>
+                                <li>}</li>
+                            </ul>
+                            <br>
+                            <h6>ResultOfObject</h6>
+                            <ul class="sin-viñetas">
+                                <li>{</li>
+                                <li><u>Status</u>: string,
+                                    <ul class="sin-viñetas">
+                                        <li>Enum:</li>
+                                        <li>
+                                            [ SUCCESS, ERROR, WARNING, SUCCESS_WITH_WARN, NO_RESULT,
+                                            LOCATION_NOT_VALID,
+                                            EXTRACT_NOT_SUCESS ]
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><u>Message</u>: string</li>
+                                <li><u>Response</u>: string
+                                    <ul class="sin-viñetas">
+                                        <li>{</li>
+                                        <li>}</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+</body>
+<footer class="text-center">
+    <div class="mb-2">
+        <small>
+            © 2024 ID Factory
+        </small>
+    </div>
+</footer>
+</div>
+</main>
+<!-- page-content" -->
+</div>
+<!-- page-wrapper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
