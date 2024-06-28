@@ -555,15 +555,3 @@ body {
   background-color: #4CAF50;
   color: white;
 }
-
-
-.image-container {
-  width: 100%; /* Puedes ajustar este valor según el tamaño del espacio disponible */
-  height: 100%; /* Puedes ajustar este valor según el tamaño del espacio disponible */
-  overflow-x: scroll; /* Habilita el scroll horizontal */
-  overflow-y: scroll; /* Deshabilita el scroll vertical si no es necesario */
-  border: 1px solid #ccc; /* Opcional: Añade un borde para visualizar mejor el contenedor */
-}
-.image-container img {
-  display: block; /* Evita espacio adicional debajo de la imagen */
-}
