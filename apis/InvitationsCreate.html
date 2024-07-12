@@ -147,12 +147,12 @@
                                 <span>Front</span>
                             </a>
                         </li>
-                        <!-- <li>
+                        <li>
                             <a href="GetUidLiveness.html">
                                 <i class="fa fa-book"></i>
                                 <span>GetUidLiveness</span>
                             </a>
-                        </li> -->
+                        </li>
                         <li>
                             <a href="InvitationsCreate.html">
                                 <i class="fa fa-book"></i>
@@ -245,9 +245,9 @@
                             <td>No</td>
                             <td>Email associated to the user who creates the invitation </td>
                             <td>maxLength: 200
-                                    <br>minLength: 0
-                                    <br>pattern:
-                                    ^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$
+                                <br>minLength: 0
+                                <br>pattern:
+                                ^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$
                             </td>
                         </tr>
                         <tr>
@@ -320,7 +320,8 @@
                         <tr>
                             <td>TemplatesIds</td>
                             <td>[integer($int32)]</td>
-                            <td>If sendEmail or sendSms is true this field becomes mandatory, otherwise it is sent null</td>
+                            <td>If sendEmail or sendSms is true this field becomes mandatory, otherwise it is sent null
+                            </td>
                             <td>Id of the templates associated to the invitation.</td>
                             <td>Returns an integer</td>
                         </tr>
@@ -371,19 +372,20 @@
                 <hr>
                 <h3>Example</h3>
                 <ul class="sin-viñetas">
-                    <P>The next example is when SELFIE and ID is selected.</P>                    
-                    <li>curl --location</li>
-                    <li>'https://qa.idfactory.me/GenieBackendQA/api/v2/Integration/Invitations/Create' \</li>
+                    <P>The next example is when SELFIE and ID is selected.</P>
+                    <li>curl --location 'https://qa.idfactory.me/GenieBackendQA/api/v2/Integration/Invitations/Create' \
+                    </li>
                     <li>--header 'accept: application/json' \</li>
                     <li>--header 'Content-Type: application/json' \</li>
-                    <li>--data '{ "SubCustomer": "SubcustomerName", "StartDate": "2024/07/10 16:28:18", "FinishDate": "2030/12/17 00:00:00", "AutomaticAuthorization": true, "AuthenticationInsite": false, "IsEmployee": false, "IsOpen": false, "Steps": [ { "Order": 1, "Step": "SELFIE" },{ "Order": 2, "Step": "ID" } ], "SendEmail": true, "SendSms": false}'</li>
-                    <li>],</li>
-                    <li>"SendEmail": false,</li>
-                    <li>"SendSms": false,</li>
-                    <li>"TemplatesIds": null</li>
-                    <li>}</li>
+                    <li>--data '{ "SubCustomer": "SubcustomerName", "StartDate": "2024/07/10 16:28:18", "FinishDate":
+                        "2030/12/17 00:00:00", "AutomaticAuthorization": true, "AuthenticationInsite": false,
+                        "IsEmployee": false, "IsOpen": false, "Steps": [ { "Order": 1, "Step": "SELFIE" },{ "Order": 2,
+                        "Step": "ID" } ], "SendEmail": true, "SendSms": false}'</li>
                 </ul>
-                <p style="color: red"><strong>Note</strong>: Replace the name of the sub customer in the "SubCustomer" field.</p>
+                <p style="color: blue"><strong>Note</strong>:
+                <ul>
+                    <li style="color: blue;">Replace the name of the sub customer in the "SubCustomer" field.</li>
+                </ul>
                 <div class="row">
                     <div class="form-group col-md-12">
                         <h3>InvitationsApiModelV2</h3>
@@ -498,8 +500,9 @@
                                         <li>"InvitationKey": "string"</li>
                                         <li>"QRCode": "Base 64 image"</li>
                                         <li>"Url": "string"</li>
-                                    </ul>    
-                                }</li>
+                                    </ul>
+                                    }
+                                </li>
                                 <li>}</li>
                             </ul>
                             <br>

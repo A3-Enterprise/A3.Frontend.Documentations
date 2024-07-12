@@ -148,6 +148,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="GetUidLiveness.html">
+                                <i class="fa fa-book"></i>
+                                <span>GetUidLiveness</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="InvitationsCreate.html">
                                 <i class="fa fa-book"></i>
                                 <span>InvitationsCreate</span>
@@ -214,11 +220,25 @@
                             <td>Authorization</td>
                             <td>string</td>
                             <td>Yes</td>
-                            <td></td>
+                            <td>This field receive a bearer token for authentication,bearer token</td>
                             <td>Text string</td>
                         </tr>
                     </table>
                 </div>
+                <hr>
+                <h3>Example</h3>
+                <ul class="sin-viñetas">
+                    <li>curl --location 'https://qa.idfactory.me/GenieBackendQA/Integration/Validation/240' \</li>
+                    <li>--header 'accept: application/json' \,</li>
+                    <li>--header 'SubCustomer: SubcustomerName' \</li>
+                    <li>--header 'Authorization: bearer
+                        dvG1N7fMf8ZMBTBdwfbRi-S6uPlXBDnsxc43s-umMOBnzLth3OVu_q0eRXHx1I_0-CnXhEqF_FDsBuZ9YxUIOWLClKD60sMyLSB7OGJCMd25zk80E4DRSLIwfY0v2uRBsvLUHFbsUuo-Ze00KJYLLwTb4xVNZXDLOtWdrxN2yorDLNOkoiCnW98q9cISTa4qp8QrpjTe_YFEP2syEmIOz-ngBK2J2Da8Ld2Zx16AC6jLkBAEGHGj_BuqbE_45gct1gw_7cCfoQ0cHvt2Y-FGnzx0hiIYoFavH-fN20pSwi4yaFNEfw2l9gyvLPfEUo3-PdSvuEzAgpqa2OZ1v0Qi0A'
+                    </li>
+                </ul>
+                <p style="color: blue"><strong>Note</strong>:
+                <ul>
+                    <li style="color: blue;">Replace the name of the sub customer in the "SubCustomer" field.</li>
+                </ul>
                 <hr>
                 <h3>Response</h3>
                 <h5>200</h5>

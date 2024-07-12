@@ -148,6 +148,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="GetUidLiveness.html">
+                                <i class="fa fa-book"></i>
+                                <span>GetUidLiveness</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="InvitationsCreate.html">
                                 <i class="fa fa-book"></i>
                                 <span>InvitationsCreate</span>
@@ -200,7 +206,8 @@
                             <td>SubCustomer</td>
                             <td>STRING</td>
                             <td>Yes</td>
-                            <td>This field received the customer’s name with wich it will be carried out the invitation for will be registered on the system.  </td>
+                            <td>This field received the customer’s name with wich it will be carried out the invitation
+                                for will be registered on the system. </td>
                             <td>Text string</td>
                         </tr>
                         <tr>
@@ -236,7 +243,7 @@
                             <td>string</td>
                             <td>Yes</td>
                             <td>Action type to execute, in this case “Verify” </td>
-                            <td>Text string</td>
+                            <td>[VERIFY]</td>
                         </tr>
                         <tr>
                             <td>SendEmail</td>
@@ -263,7 +270,8 @@
                             <td>TemplatesIds</td>
                             <td>integer($int32)</td>
                             <td>No</td>
-                            <td>This field defined the identifier of the templates configured on platform, for send emails or text messages. </td>
+                            <td>This field defined the identifier of the templates configured on platform, for send
+                                emails or text messages. </td>
                             <td>Returns an integer</td>
                         </tr>
                         <tr>
@@ -283,11 +291,29 @@
                     </table>
                 </div>
                 <hr>
+                <h3>Example</h3>
+                <ul class="sin-viñetas">
+                    <li>curl --location
+                        'https://qa.idfactory.me/GenieBackendQA/api/v2/Integration/Invitations/SendMessages' \</li>
+                    <li>--header 'accept: application/json' \</li>
+                    <li>--header 'Authorization: bearer
+                        66q4iVHchJnqSVRvcwl4QswQ4yneoZDW9g_NRlln9YbYtPrVInhRZwOrl9_XE-M--pv8enrsqDZgkkwbsytEs6vQkhbuQ6fWZfodpmBU2VEnoN0QBKKDa5OMdc-rKIpyrw1p7hfOTQFZJ7_XW7Vy8QUZ5n1KBmGXLdTBSt98y_aa5dwS7NmIash76gEeog0u8BTFcdLbuQYsrQqOWwM6iq120inYgYujCeHhrYLztXK4qSrm9q2sJjminyGw5Y2zx_BLb9XGmnj6Tcc_FSrq_NX8LL7-IsVL2LSBVliIFyfacafGA5_42tMVcdfW52mjJ2b2CUKyI_rOZawuPkko4w'
+                        \</li>
+                    <li>--header 'Content-Type: application/json' \</li>
+                    <li>--data '{ "SubCustomer": "SubcustomerName", "StartDate": "2024/07/12 10:12:24", "FinishDate":
+                        "2030/12/17 00:00:00", "PersonId": "fd1b1c83-c967-419a-b5f6-cae7390bed4f", "Action": "Verify",
+                        "SendEmail": 14, "SendSms": 2, "Callback": "", "TemplatesIds": [ 14, 2 ], "IsOpen": false}'</li>
+                </ul>
+                <p style="color: blue"><strong>Note</strong>:
+                <ul>
+                    <li style="color: blue;">Replace the name of the sub customer in the "SubCustomer" field.</li>
+                </ul>
+                </p>
+                <hr>
                 <h3>Response</h3>
                 <h5>200</h5>
                 <div class="row">
                     <div class="form-group col-md-12">
-
                         <p>Identity has been verified</p>
                         <h6>Example value</h6>
                         <ul class="sin-viñetas">
@@ -348,7 +374,8 @@
                                 <ul class="sin-viñetas">
                                     <li>Enum:</li>
                                     <li>
-                                        [ SUCCESS, ERROR, WARNING, SUCCESS_WITH_WARN, NO_RESULT, LOCATION_NOT_VALID, EXTRACT_NOT_SUCESS ]</li>
+                                        [ SUCCESS, ERROR, WARNING, SUCCESS_WITH_WARN, NO_RESULT, LOCATION_NOT_VALID,
+                                        EXTRACT_NOT_SUCESS ]</li>
                                 </ul>
                             </li>
                             <li><u>Message</u>: string</li>

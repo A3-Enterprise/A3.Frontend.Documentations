@@ -148,6 +148,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="GetUidLiveness.html">
+                                <i class="fa fa-book"></i>
+                                <span>GetUidLiveness</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="InvitationsCreate.html">
                                 <i class="fa fa-book"></i>
                                 <span>InvitationsCreate</span>
@@ -200,7 +206,8 @@
                             <td>SubCustomer</td>
                             <td>string</td>
                             <td>Yes</td>
-                            <td>This field received the customer’s name with wich it will be carried out the invitation for will be registered on the system.</td>
+                            <td>This field received the customer’s name with wich it will be carried out the invitation
+                                for will be registered on the system.</td>
                             <td>Text string</td>
                         </tr>
                         <tr>
@@ -220,6 +227,22 @@
                     </table>
                 </div>
                 <hr>
+                <h3>Example</h3>
+                <ul class="sin-viñetas">
+                    <li>curl --location --request POST
+                        'https://qa.idfactory.me/GenieBackendQA/Integration/Validation/Close' \</li>
+                    <li>--header 'accept: application/json' \</li>
+                    <li>--header 'SubCustomer: CajaMetropolitanaSubCustomerQA' \</li>
+                    <li>--header 'Uid: FC3C8FB492DF4BFB82E59448051FDF7812072024014614640' \</li>
+                    <li>--header 'Authorization: bearer
+                        gIAE8XbkJAgTakwCvFFA-50qXeDJLa9rqP1aQydozHSLf0fQXd82Xwbnxq_MqIsggs0t2S2QhDzXFil23C2fv8-glZM4KtS-AYha1zSJG9sZGk9Gvlm82Cayp7I8Pq3D7C1xU0pa0ywvBs35AadeqaWATyu_eVF-TR8yangNNm_chcm6LKloRE8YTjdSD_cletxE80gtIxhiEAlAeyonoGJXXnGuD2kTlTQStSNWPWnUvEHAjwPin2fZybKKWM6eRZRPoD6ftXiXhre25-8eZZ8eumkulA0UJlGrKvwRPL9vdPWujo4junPo2W3tD_L0ApKvDybBarBMZz7SKZypZA'
+                    </li>
+                </ul>
+                <p style="color: blue"><strong>Note</strong>:
+                <ul>
+                    <li style="color: blue;">Replace the name of the sub customer in the "SubCustomer" field.</li>
+                </ul>
+                <hr>
                 <h3>Response</h3>
                 <h5>200</h5>
                 <div class="row">
@@ -235,7 +258,8 @@
                 <div class="row">
                     <div class="form-group col-md-12">
 
-                        <p>The request body is not valid || (Status = Warning) the photographs for the transaction generation are incomplete</p>
+                        <p>The request body is not valid || (Status = Warning) the photographs for the transaction
+                            generation are incomplete</p>
                         <h6>Example value</h6>
                         <ul class="sin-viñetas">
                             <li>{</li>

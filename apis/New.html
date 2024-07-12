@@ -148,6 +148,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="GetUidLiveness.html">
+                                <i class="fa fa-book"></i>
+                                <span>GetUidLiveness</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="InvitationsCreate.html">
                                 <i class="fa fa-book"></i>
                                 <span>InvitationsCreate</span>
@@ -242,6 +248,23 @@
                         </tr>
                     </table>
                 </div>
+                <hr>
+                <h3>Example</h3>
+                <ul class="sin-viñetas">
+                    <li>curl --location 'https://qa.idfactory.me/GenieBackendQA/Integration/Validation/New' \</li>
+                    <li>--header 'accept: application/json' \</li>
+                    <li>--header 'Authorization: bearer UXf8L-P0riyUCT2W5-X8CBUyyPBYQNLYAyZl3dp4n3_BSTyG1R0Ak-</li>
+                    <li>--header 'Content-Type: application/json' \</li>
+                    <li>--data '{ "SubCustomer": "SubcustomerName", "InvitationKey":
+                        "077dd413f862436dac973e3fc99aae6211072024074922106", "CaseId":
+                        "d4e0e7ed-5940-4e36-8384-9b1a90dec7a3", "DeviceMetadata":
+                        "eyJhZGlkIjoiMTcxNzgwMjAwMzM2NC0xNTIyYzY4OS01ZmM3LTQ1NDctYjc3NS05ZjYyNDAxZWE5ZTMiLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTI2LjAuMC4wIFNhZmFyaS81MzcuMzYgRWRnLzEyNi4wLjAuMCJ9"}'
+                    </li>
+                </ul>
+                <p style="color: blue"><strong>Note</strong>:
+                <ul>
+                    <li style="color: blue;">Replace the name of the sub customer in the "SubCustomer" field.</li>
+                </ul>
                 <hr>
                 <div class="row">
                     <div class="form-group col-md-12">

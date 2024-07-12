@@ -148,13 +148,12 @@
                                 <span>Front</span>
                             </a>
                         </li>
-                        <!-- 
                         <li>
                             <a href="GetUidLiveness.html">
                                 <i class="fa fa-book"></i>
                                 <span>GetUidLiveness</span>
                             </a>
-                        </li> -->
+                        </li>
                         <li>
                             <a href="InvitationsCreate.html">
                                 <i class="fa fa-book"></i>
@@ -230,15 +229,20 @@
                 <hr>
                 <h3>Example</h3>
                 <ul class="sin-viñetas">
-                    <li>curl --location {</li>
-                    <li>'https://qa.idfactory.me/GenieBackendQA/api/Integration/Authorization/GetToken' \</li>
+                    <li>curl --location 'https://qa.idfactory.me/GenieBackendQA/api/Integration/Authorization/GetToken'
+                        \</li>
                     <li>--header 'accept: application/json' \</li>
                     <li>--header 'Content-Type: application/x-www-form-urlencoded' \</li>
                     <li>--data-urlencode 'grant_type=password' \</li>
                     <li>--data-urlencode 'username=user.mail@mail.com' \</li>
                     <li>--data-urlencode 'password=3e8b22466b170c236d4c3207b80d48a478078468'</li>
                 </ul>
-                <p style="color: red"><strong>Note</strong>: In the "username" field replace with your username and in the "password" field replace with the password in SHA1 format.</p>
+                <p style="color: blue"><strong>Note</strong>:
+                <ul>
+                    <li style="color: blue">In the "username" field replace with your username.</li>
+                    <li style="color: blue">In the "password" field replace with the password in SHA1 format.</li>
+                </ul>
+                </p>
                 <hr>
                 <h3>Response</h3>
                 <div class="form-group col-md-12">

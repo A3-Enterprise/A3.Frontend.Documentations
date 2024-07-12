@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li class="header-menu">
-                            <span>SDK flows</span>
+                            <span>Flujos SDK</span>
                         </li>
                         <li class="sidebar-dropdown">
                             <a href="#">
@@ -81,7 +81,7 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="../flujos/flujoGeneralWeb.html">Web page
+                                        <a href="../flujos/flujoGeneralWeb.html">Components for flow
                                             <!-- <span class="badge badge-pill badge-success">Pro</span> -->
                                         </a>
                                     </li>
@@ -190,7 +190,7 @@
         <!-- sidebar-wrapper  -->
         <main class="page-content">
             <div class="container-fluid">
-                <h2>FindByNumberIdSuccess Api <span class="badge badge-pill badge-primary">GET</span></h2>
+                <h2>GetUidLiveness <span class="badge badge-pill badge-primary">GET</span></h2>
                 <hr>
                 <h3>Request</h3>
                 <div class="form-group col-md-12">
@@ -206,22 +206,17 @@
                             <td>SubCustomer</td>
                             <td>string</td>
                             <td>Yes</td>
-                            <td>Defines the name of the subclient configured on the platform</td>
+                            <td>In this field, the name of the client was received with which the person's identity will
+                                be verified.</td>
                             <td>Text string</td>
                         </tr>
                         <tr>
-                            <td>identificationNumber</td>
+                            <td>Authorization</td>
                             <td>string</td>
-                            <td>Yes</td>
-                            <td>Person identification number</td>
+                            <td>No</td>
+                            <td>Defines the authentication of the endpoint, if OAuth is active it will be requested,
+                                otherwise it is not used.</td>
                             <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>identificationType</td>
-                            <td>integer($int32)</td>
-                            <td>Yes</td>
-                            <td>Identifier of the type of document registered on the platform</td>
-                            <td>Returns an Integer</td>
                         </tr>
                     </table>
                 </div>
@@ -229,57 +224,91 @@
                 <h3>Example</h3>
                 <ul class="sin-viñetas">
                     <li>curl --location
-                        'https://qa.idfactory.me/GenieBackendQA/Integration/Identities/FindByNumberIdSuccess?identificationNumber=1030648319&identificationType=1'
-                        \</li>
+                        'https://qa.idfactory.me/GenieBackendQA/api/Integration/Authorization/GetUidLiveness' \</li>
                     <li>--header 'accept: application/json' \</li>
+                    <li>--header 'SubCustomer: SubcustomerName' \</li>
                     <li>--header 'Authorization: bearer
-                        dvG1N7fMf8ZMBTBdwfbRi-S6uPlXBDnsxc43s-umMOBnzLth3OVu_q0eRXHx1I_0-CnXhEqF_FDsBuZ9YxUIOWLClKD60sMyLSB7OGJCMd25zk80E4DRSLIwfY0v2uRBsvLUHFbsUuo-Ze00KJYLLwTb4xVNZXDLOtWdrxN2yorDLNOkoiCnW98q9cISTa4qp8QrpjTe_YFEP2syEmIOz-ngBK2J2Da8Ld2Zx16AC6jLkBAEGHGj_BuqbE_45gct1gw_7cCfoQ0cHvt2Y-FGnzx0hiIYoFavH-fN20pSwi4yaFNEfw2l9gyvLPfEUo3-PdSvuEzAgpqa2OZ1v0Qi0A'
-                        \</li>
-                    <li>--header 'SubCustomer: CajaMetropolitanaSubCustomerQA'</li>
+                        -rBuEjPN7fTaqLJnmOY6lG0VvBUI2FxMQBMArqLCbCn-rwwMDdoJt6ExHzWkcINCaLE3zAv7-3QsKbtVtHbp0Llqff1jpqaWAnCg7zm-a_j2pP-DsDwZjrZvl_JnmrJIBSL9B_pgt2VcVN8EK8DISzzY6hUgvTTbCNoXzGtUNrJiBqNbuzhB5JY_jdE5M6XrkVIgNrecjl2opO7jv-qnde3df6aVKY8KRh185DTQ6gPf_mFJD3YeOtS1S-75lhg4pgoPajhw8J6w1ND5OG3kLvXT9t99C0Yu9s0ZwjBvhzqBu_dDnAXmx79Oiee2RPMNulr83vbLXExzZNnfUmzDXQ'
+                    </li>
                 </ul>
                 <p style="color: blue"><strong>Note</strong>:
                 <ul>
-                    <li style="color: blue;">Replace for name of the sub customer in the "SubCustomer" field.</li>
-                    <li style="color: blue;">Replace for your id number in the "identificationNumber" field</li>
-                    <li style="color: blue;">Replace for id of identification type in the "identificationType" field
-                    </li>
+                    <li style="color: blue;">Replace the name of the sub customer in the "SubCustomer" field.</li>
                 </ul>
-                </p>
                 <hr>
                 <h3>Response</h3>
                 <h5>200</h5>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <p>Found identity</p>
-                        <h6>Example value</h6>
+                        <p>Search results</p>
                         <ul class="sin-viñetas">
-                            <li>{</li>
-                            <li>"Status": "SUCCESS",</li>
-                            <li>"Message": "string",</li>
-                            <li>"Response": {}</li>
-                            <li>}</li>
+                            <li>"Subcustomer": string</li>
+                            <li>"Id": 0,</li>
+                            <li>"CustomerName": "string",</li>
+                            <li>"Nit": "string",</li>
+                            <li>"Address": "string",</li>
+                            <li>"State": 0,</li>
+                            <li>"ContactName": "string",</li>
+                            <li>"ContactNumberPhone": "string",</li>
+                            <li>"ContactEmail": "string",</li>
+                            <li>"CityId": 0,</li>
+                            <li>"City": "string",</li>
+                            <li>"ApiKey": "string",</li>
                         </ul>
-                        <br>
-                        <h6>ResultOfObject</h6>
+                        <h6>CustomerDto{</h6>
                         <ul class="sin-viñetas">
-                            <li>{</li>
-                            <li><u>Status</u>: string,
+                            <li><u>SubCustomer*</u>: string</li>
+                            <li><u>Id</u>: integer($int32)</li>
+                            <li><u>CustomerName*</u>: string
                                 <ul class="sin-viñetas">
-                                    <li>Enum:</li>
-                                    <li>
-                                        [ SUCCESS, ERROR, WARNING, SUCCESS_WITH_WARN, NO_RESULT, LOCATION_NOT_VALID,
-                                        EXTRACT_NOT_SUCESS ]
+                                    <li>maxLength: 150</li>
+                                    <li>minLength: 0</li>
+                                    <li>pattern: ^[0-9a-zA-ZäöüÄÖÜZñÑáéíóúÁÉÍÓÚ ]*$</li>
+                                </ul>
+                            </li>
+                            <li><u>Nit*</u>: string
+                                <ul class="sin-viñetas">
+                                    <li>maxLength: 50</li>
+                                    <li>minLength: 0</li>
+                                    <li>pattern: ^[0-9a-zA-ZäöüÄÖÜZñÑáéíóúÁÉÍÓÚ ]*$</li>
+                                </ul>
+                            </li>
+                            <li><u>Address*</u>: string
+                                <ul class="sin-viñetas">
+                                    <li>maxLength: 200</li>
+                                    <li>minLength: 0</li>
+                                </ul>
+                            </li>
+                            <li><u>State</u>: integer($int32)</li>
+                            <li><u>ContactName*</u>: string
+                                <ul class="sin-viñetas">
+                                    <li>maxLength: 200</li>
+                                    <li>minLength: 0</li>
+                                </ul>
+                            </li>
+                            <li><u>ContactNumberPhone*</u>: string
+                                <ul class="sin-viñetas">
+                                    <li>maxLength: 200</li>
+                                    <li>minLength: 0</li>
+                                </ul>
+                            </li>
+                            <li><u>ContactEmail*</u>: string
+                                <ul class="sin-viñetas">
+                                    <li>maxLength: 200</li>
+                                    <li>minLength: 0</li>
+                                    <li>pattern:
+                                        ^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$
                                     </li>
                                 </ul>
                             </li>
-                            <li><u>Message</u>: string</li>
-                            <li><u>Response</u>: string
+                            <li><u>CityId*</u>: integer($int32)</li>
+                            <li><u>City</u>: string</li>
+                            <li><u>ApiKey</u>: string
                                 <ul class="sin-viñetas">
-                                    <li>{</li>
-                                    <li>}</li>
+                                    <li>maxLength: 200</li>
+                                    <li>minLength: 0</li>
                                 </ul>
                             </li>
-                            <li>}</li>
                         </ul>
                     </div>
                 </div>
@@ -303,7 +332,6 @@
                             <li>"Response": {}</li>
                             <li>}</li>
                         </ul>
-                        <br>
                         <h6>ResultOfObject</h6>
                         <ul class="sin-viñetas">
                             <li>{</li>
@@ -323,9 +351,7 @@
                                     <li>}</li>
                                 </ul>
                             </li>
-                            <li>}</li>
                         </ul>
-
                     </div>
                 </div>
                 <hr>

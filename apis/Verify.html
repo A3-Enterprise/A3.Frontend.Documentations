@@ -148,6 +148,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="GetUidLiveness.html">
+                                <i class="fa fa-book"></i>
+                                <span>GetUidLiveness</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="InvitationsCreate.html">
                                 <i class="fa fa-book"></i>
                                 <span>InvitationsCreate</span>
@@ -200,7 +206,8 @@
                             <td>SubCustomer</td>
                             <td>string</td>
                             <td>Yes</td>
-                            <td>In this field, the name of the client was received with which the person's identity will be verified.</td>
+                            <td>In this field, the name of the client was received with which the person's identity will
+                                be verified.</td>
                             <td>Text string</td>
                         </tr>
                         <tr>
@@ -228,7 +235,8 @@
                             <td>InvitationKey</td>
                             <td>string</td>
                             <td>Yes</td>
-                            <td>This field receive the invitation previously created in Invitations/Created endpoint.</td>
+                            <td>This field receive the invitation previously created in Invitations/Created endpoint.
+                            </td>
                             <td>Text string</td>
                         </tr>
                         <tr>
@@ -262,6 +270,25 @@
                     </table>
                 </div>
                 <hr>
+                <h3>Example</h3>
+                <ul class="sin-viñetas">
+                    <li>curl --location 'https://qa.idfactory.me/GenieBackendQA/Integration/Validation/Verify' \</li>
+                    <li>--header 'accept: application/json' \</li>
+                    <li>--header 'Authorization: bearer
+                        GlxeB5ZpgU9fkRb-fKFudeK3T2imrhoIPs3FsGL8znI08n0uEeEApud6Sd1xzrxkybrjKzCFxBKP2zz9eezaSOxShghNJ4_64V4r8OPY8NiJa5M_yzOwdHr4jpGPHxxSJXtVJu2LOmdMMiWx3pIRHin3k3aEljSeI4urkFVy0lj9f6rLEN5Qyk5odRZQ0QXOEOZy92vkoBxeT8lC_IRhbt4DnxsOGA_ViOcPw2k1yyR_niKxOXd3u4IK9P62XEWkAIDdzt89X9Qj4_4NKIAcvZFa48ZShYluKb47_jmbYwQW8kxGLXY6JRvc6Unh-EHZbGmLzakFq0DrC4xJBg-tDg'
+                        \</li>
+                    <li>--header 'Content-Type: application/json' \</li>
+                    <li>--data '{ "SubCustomer": "SubcustomerName", "PersonId": "89766c4a-ecb3-4c4f-bb75-2e064661e0bf",
+                        "CaseId": "f3cf98d1-d267-4639-8022-85d858da6a55", "InvitationKey":
+                        "984a60774b9348de9f14544055fb8e7812072024023202706", "DeviceMetadata":
+                        "eyJhZGlkIjoiMTcyMDc5NDc2MjQyOC04YmFkNmRmNS04YzYwLTQ2YTQtYTRhNi1iOTAwNTk1NDFlZGEiLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTI2LjAuMC4wIFNhZmFyaS81MzcuMzYgRWRnLzEyNi4wLjAuMCJ9"
+                        }'</li>
+                </ul>
+                <p style="color: blue"><strong>Note</strong>:
+                <ul>
+                    <li style="color: blue;">Replace the name of the sub customer in the "SubCustomer" field.</li>
+                </ul>
+                <hr>
                 <h3>Response</h3>
                 <h5>200</h5>
                 <div class="row">
@@ -274,7 +301,8 @@
                 <h5>400</h5>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <p>The request body is not valid || (Status = Warning) the photographs for the transaction generation are incomplete</p>
+                        <p>The request body is not valid || (Status = Warning) the photographs for the transaction
+                            generation are incomplete</p>
                         <h6>Example value</h6>
                         <ul class="sin-viñetas">
                             <li>{</li>
@@ -323,7 +351,8 @@
                                 <ul class="sin-viñetas">
                                     <li>Enum:</li>
                                     <li>
-                                        [ SUCCESS, ERROR, WARNING, SUCCESS_WITH_WARN, NO_RESULT, LOCATION_NOT_VALID, EXTRACT_NOT_SUCESS ]
+                                        [ SUCCESS, ERROR, WARNING, SUCCESS_WITH_WARN, NO_RESULT, LOCATION_NOT_VALID,
+                                        EXTRACT_NOT_SUCESS ]
                                     </li>
                                 </ul>
                             </li>
