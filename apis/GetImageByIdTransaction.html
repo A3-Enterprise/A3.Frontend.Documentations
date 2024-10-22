@@ -202,7 +202,7 @@
         <!-- sidebar-wrapper  -->
         <main class="page-content">
             <div class="container-fluid">
-                <h2>SendMessages Api <span class="badge badge-pill badge-success">POST</span></h2>
+                <h2>GetImageById Transaction Api <span class="badge badge-pill badge-primary">GET</span></h2>
                 <hr>
                 <h3>Request</h3>
                 <div class="form-group col-md-12">
@@ -215,90 +215,25 @@
                             <th>Values</th>
                         </tr>
                         <tr>
-                            <td>SubCustomer</td>
-                            <td>STRING</td>
-                            <td>Yes</td>
-                            <td>This field received the customer’s name with wich it will be carried out the invitation
-                                for will be registered on the system. </td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>StartDate</td>
-                            <td>string</td>
-                            <td>Yes</td>
-                            <td>This field receives the start date of the invitation.</td>
-                            <td>2023/01/01 16:44:30</td>
-                        </tr>
-                        <tr>
-                            <td>FinishDate</td>
-                            <td>string</td>
-                            <td>Yes</td>
-                            <td>This field receives the end date of the invitation.</td>
-                            <td>2023/12/30 16:44:30</td>
-                        </tr>
-                        <tr>
-                            <td>PersonId</td>
-                            <td>string</td>
-                            <td>No</td>
-                            <td>Identifier of the identity, generated for the system. </td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>IdNumber</td>
-                            <td>string</td>
-                            <td>No</td>
-                            <td>Identity identification number </td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>Action</td>
-                            <td>string</td>
-                            <td>Yes</td>
-                            <td>Action type to execute, in this case “Verify” </td>
-                            <td>[VERIFY]</td>
-                        </tr>
-                        <tr>
-                            <td>SendEmail</td>
-                            <td>boolean</td>
-                            <td>Yes</td>
-                            <td>This field define if it will be sent link to customer’s email </td>
-                            <td>True or false</td>
-                        </tr>
-                        <tr>
-                            <td>SendSms</td>
-                            <td>boolean</td>
-                            <td>Yes</td>
-                            <td>This field define if it will be sent link to customer’s number phone </td>
-                            <td>True or false</td>
-                        </tr>
-                        <tr>
-                            <td>Callback</td>
-                            <td>string</td>
-                            <td>No</td>
-                            <td>Url to wich it will be realized request with transaction response. </td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>TemplatesIds</td>
+                            <td>TransactionId</td>
                             <td>integer($int32)</td>
-                            <td>No</td>
-                            <td>This field defined the identifier of the templates configured on platform, for send
-                                emails or text messages. </td>
-                            <td>Returns an integer</td>
+                            <td>Yes</td>
+                            <td></td>
+                            <td>Returns an Integer</td>
                         </tr>
                         <tr>
-                            <td>Csid</td>
+                            <td>SubCustomer</td>
                             <td>string</td>
-                            <td>No</td>
-                            <td>This field defined the identifier of the customer session.</td>
+                            <td>Yes</td>
+                            <td>Defines the name of the subclient configured on the platform</td>
                             <td>Text string</td>
                         </tr>
                         <tr>
-                            <td>IsOpen</td>
-                            <td>boolean</td>
-                            <td>No</td>
-                            <td>Defines whether the invitation is open or not</td>
-                            <td>True or false</td>
+                            <td>Authorization</td>
+                            <td>string</td>
+                            <td>Yes</td>
+                            <td>This field receive a bearer token for authentication,bearer token</td>
+                            <td>Text string</td>
                         </tr>
                     </table>
                 </div>
@@ -306,19 +241,21 @@
                 <h3>Example</h3>
                 <ul class="sin-viñetas">
                     <li>curl --location
-                        'https://qa.idfactory.me/GenieBackendQA/api/v2/Integration/Invitations/SendMessages' \</li>
-                    <li>--header 'accept: application/json' \</li>
-                    <li>--header 'Authorization: bearer
-                        66q4iVHchJnqSVRvcwl4QswQ4yneoZDW9g_NRlln9YbYtPrVInhRZwOrl9_XE-M--pv8enrsqDZgkkwbsytEs6vQkhbuQ6fWZfodpmBU2VEnoN0QBKKDa5OMdc-rKIpyrw1p7hfOTQFZJ7_XW7Vy8QUZ5n1KBmGXLdTBSt98y_aa5dwS7NmIash76gEeog0u8BTFcdLbuQYsrQqOWwM6iq120inYgYujCeHhrYLztXK4qSrm9q2sJjminyGw5Y2zx_BLb9XGmnj6Tcc_FSrq_NX8LL7-IsVL2LSBVliIFyfacafGA5_42tMVcdfW52mjJ2b2CUKyI_rOZawuPkko4w'
+                        'https://app.idfactory.me/GenieBackendProd/Integration/Validation/GetImagesById'
                         \</li>
-                    <li>--header 'Content-Type: application/json' \</li>
-                    <li>--data '{ "SubCustomer": "SubcustomerName", "StartDate": "2024/07/12 10:12:24", "FinishDate":
-                        "2030/12/17 00:00:00", "PersonId": "fd1b1c83-c967-419a-b5f6-cae7390bed4f", "Action": "Verify",
-                        "SendEmail": 14, "SendSms": 2, "Callback": "", "TemplatesIds": [ 14, 2 ], "IsOpen": false}'</li>
+                    <li>-H 'accept: application/json' \</li>
+                    <li>-H 'TransactionId: Transaction id'</li>
+                    <li>-H 'SubCustomer: Subcustomer id'</li>
+                    <li>-H 'Authorization: bearer
+                        dvG1N7fMf8ZMBTBdwfbRi-S6uPlXBDnsxc43s-umMOBnzLth3OVu_q0eRXHx1I_0-CnXhEqF_FDsBuZ9YxUIOWLClKD60sMyLSB7OGJCMd25zk80E4DRSLIwfY0v2uRBsvLUHFbsUuo-Ze00KJYLLwTb4xVNZXDLOtWdrxN2yorDLNOkoiCnW98q9cISTa4qp8QrpjTe_YFEP2syEmIOz-ngBK2J2Da8Ld2Zx16AC6jLkBAEGHGj_BuqbE_45gct1gw_7cCfoQ0cHvt2Y-FGnzx0hiIYoFavH-fN20pSwi4yaFNEfw2l9gyvLPfEUo3-PdSvuEzAgpqa2OZ1v0Qi0A'
+                        \</li>
+                    
                 </ul>
                 <p style="color: blue"><strong>Note</strong>:
                 <ul>
-                    <li style="color: blue;">Replace the name of the sub customer in the "SubCustomer" field.</li>
+                    <li style="color: blue;">Replace for transaction id in the TransactionId field</li>
+                    <li style="color: blue;">Replace for subcustomer name in the "SubCustomer" field.</li>
+                    <li style="color: blue;">Replace for token in the "Authorization" field</li>
                 </ul>
                 </p>
                 <hr>
@@ -326,45 +263,32 @@
                 <h5>200</h5>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <p>Identity has been verified</p>
+                        <p>search results</p>
                         <h6>Example value</h6>
                         <ul class="sin-viñetas">
-                            <li>"Id": 0</li>
-                            <li>"Status": "SUCCESS",</li>
-                            <li>"Message": "string",</li>
-                            <li>"Response": {},</li>
+                            <li>[</li>
+                            <li>{</li>
+                            <li>"ImageType": 0,</li>
+                            <li>"Image": "string",</li>
+                            <li>}</li>
+                            <li>]</li>
                         </ul>
-                        <h6>ResultOfObject</h6>
+                        <br>
+                        <h6>ImagesDto</h6>
                         <ul class="sin-viñetas">
-                            <li><u>Status</u>: string
-                                <ul class="sin-viñetas">
-                                    <h6>Enum</h6>
-                                    <li>[ SUCCESS, ERROR, WARNING, SUCCESS_WITH_WARN, NO_RESULT, LOCATION_NOT_VALID,
-                                        EXTRACT_NOT_SUCESS ]</li>
-                                </ul>
-                            </li>
-                            <li><u>Message</u>: string</li>
-                            <li><u>Response</u>
-                                <ul class="sin-viñetas">
-                                    <li>{</li>
-                                    <li>}</li>
-                                </ul>
-                            </li>
+                            <li>{</li>
+                            <li><u>ImageType</u>integer($int32)</li>
+                            <li><u>Image</u>string</li>
+                            <li>}</li>
                         </ul>
                     </div>
                 </div>
                 <hr>
                 <h3>Exception codes</h3>
-                <h5>400</h5>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <p>The validation process was not successful</p>
-                    </div>
-                </div>
                 <h5>401</h5>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <p>The token authentication process was not successful</p>
+                        <p>The authorization process was not successful</p>
                     </div>
                 </div>
                 <h5>500</h5>
@@ -379,6 +303,7 @@
                             <li>"Response": {}</li>
                             <li>}</li>
                         </ul>
+                        <br>
                         <h6>ResultOfObject</h6>
                         <ul class="sin-viñetas">
                             <li>{</li>
@@ -387,7 +312,8 @@
                                     <li>Enum:</li>
                                     <li>
                                         [ SUCCESS, ERROR, WARNING, SUCCESS_WITH_WARN, NO_RESULT, LOCATION_NOT_VALID,
-                                        EXTRACT_NOT_SUCESS ]</li>
+                                        EXTRACT_NOT_SUCESS ]
+                                    </li>
                                 </ul>
                             </li>
                             <li><u>Message</u>: string</li>
@@ -397,7 +323,9 @@
                                     <li>}</li>
                                 </ul>
                             </li>
+                            <li>}</li>
                         </ul>
+
                     </div>
                 </div>
                 <hr>
