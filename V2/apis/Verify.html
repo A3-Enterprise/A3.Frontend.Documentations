@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>ID Factory</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="../js/scripts.js" defer></script>
+</head>
+
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="../../index.html">ID Factory</a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <!-- sidebar-header  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="../index.html">
+                                <i class="fa fa-book"></i>
+                                <span>Glosary</span>
+                            </a>
+                        </li>
+                        <li class="header-menu">
+                            <span>Flujos SDK</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-circle"></i>
+                                <span>Enroll</span>
+                                <!-- <span class="badge badge-pill badge-warning">New</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="../flujos/FlujoGeneralEnroll.html">General
+                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/FlujoGeneralEnrollEcuador.html">Ecuador</a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/FlujoGeneralEnrollPeru.html">Perú</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="../flujos/Verify.html">
+                                <i class="fa fa-circle"></i>
+                                <span>Verify</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                        </li>
+                        <li class="header-menu">
+                            <span>Web flows</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-square"></i>
+                                <span>Enroll</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="../flujos/flujoGeneralWeb.html">Components for flow
+                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/FlujoComponentesImagenesEnroll.html">Components for image</a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/EcuadorWeb.html">Components for web page</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-square"></i>
+                                <span>Verify</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="../flujos/FlujoComponentesImagenesVerify.html">Components for image
+                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/EcuadorWeb.html">Por definir</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu">
+                            <span>Documents</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>User Manuals</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="../manuales/ENAdministrator.html">Administrator Rol Manual
+                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../manuales/ENQuery.html">Query Rol Manual</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu">
+                            <span>Technical documentation</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Api's</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="AuthorizationGetToken.html">
+                                            <span>GetToken</span>
+                                            <!--<span class="badge badge-pill badge-primary">Beta</span> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Back.html">
+                                            <span>Back</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Close.html">
+                                            <span>Close</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FindByNumberIdSucces.html">
+                                            <span>FindByNumberIdSucces</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Front.html">
+                                            <span>Front</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="GetImageByIdIdentity.html">
+                                            <span>GetImageById Identity</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="GetImageByIdTransaction.html">
+                                            <span>GetImageById Transact</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="GetUidLiveness.html">
+                                            <span>GetUidLiveness</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Enroll.html">
+                                            <span>Invitations/Enroll</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="New.html">
+                                            <span>New</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InvitationsVerify.html">
+                                            <span>Invitations/Verify</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Validation{id}.html">
+                                            <span>GetTransactionById</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Verify.html">
+                                            <span>Verify</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- sidebar-wrapper  -->
+        <main class="page-content">
+            <div class="container-fluid">
+                <h2><span class="badge badge-pill badge-success">POST</span> Verify</h2>
+                <hr>
+                <h3>Request</h3>
+                <div class="form-group col-md-12">
+                    <table id="glosary">
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                            <th>Description</th>
+                            <th>Values</th>
+                        </tr>
+                        <tr>
+                            <td>SubCustomer</td>
+                            <td>string</td>
+                            <td>Yes</td>
+                            <td>In this field, the name of the client was received with which the person's identity will
+                                be verified.</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>PersonId</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>Identifier of the identity, generated for the system.</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>IdNumber</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>Identity identification number</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>image</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td></td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>poNumber</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td></td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>trailerNumber</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td></td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>truckNumber</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td></td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>signatureImage</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td></td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>eventType</td>
+                            <td>integer($int32)</td>
+                            <td>No</td>
+                            <td></td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>caseId</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td></td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>invitationKey</td>
+                            <td>string</td>
+                            <td>Yes</td>
+                            <td>This field receive the invitation previously created in Invitations/Created endpoint.
+                            </td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>result</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td></td>
+                            <td>
+                                <ul class="sin-viñetas">
+                                    <li>threshold: 0</li>
+                                    <li>score: 0</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>deviceMetadata</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>Device metadata</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>csid</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>Customer session ID</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>deviceId</td>
+                            <td>integer($int32)</td>
+                            <td>No</td>
+                            <td>Identifier registered on the device platform</td>
+                            <td>Returns an integer</td>
+                        </tr>
+                        <tr>
+                            <td>riskId</td>
+                            <td>integer($int32)</td>
+                            <td>No</td>
+                            <td>Risk level defined for the transaction</td>
+                            <td>Returns an integer</td>
+                        </tr>
+                        <tr>
+                            <td>closeAttempts</td>
+                            <td>integer($int32)</td>
+                            <td>No</td>
+                            <td>Number of attempts configured by subcustomer to take the photo.</td>
+                            <td>Integer</td>
+                        </tr>
+                        <tr>
+                            <td>Authorization</td>
+                            <td>string</td>
+                            <td>Yes</td>
+                            <td>This field receive a bearer token for authentication,bearer token </td>
+                            <td>Text string</td>
+                        </tr>
+                    </table>
+                </div>
+                <hr>
+                <h3>Example</h3>
+                <ul class="sin-viñetas">
+                    <li>curl -X</li>
+                    <li>'https://dev.idfactory.me/Verify/api/Verify' \</li>
+                    <li>-H 'accept: application/json' \</li>
+                    <li>-H 'Authorization: bearer
+                        GlxeB5ZpgU9fkRb-fKFudeK3T2imrhoIPs3FsGL8znI08n0uEeEApud6Sd1xzrxkybrjKzCFxBKP2zz9eezaSOxShghNJ4_64V4r8OPY8NiJa5M_yzOwdHr4jpGPHxxSJXtVJu2LOmdMMiWx3pIRHin3k3aEljSeI4urkFVy0lj9f6rLEN5Qyk5odRZQ0QXOEOZy92vkoBxeT8lC_IRhbt4DnxsOGA_ViOcPw2k1yyR_niKxOXd3u4IK9P62XEWkAIDdzt89X9Qj4_4NKIAcvZFa48ZShYluKb47_jmbYwQW8kxGLXY6JRvc6Unh-EHZbGmLzakFq0DrC4xJBg-tDg'
+                        \</li>
+                    <li>-H 'Content-Type: application/json' \</li>
+                    <li>-d '{</li>
+                    <li>"subCustomer": "sub customer name",</li>
+                    <li>"personId": "89766c4a-ecb3-4c4f-bb75-2e064661e0bf",</li>
+                    <li>idNumber": "string",</li>
+                    <li>"image": "string",</li>
+                    <li>"poNumber": "string",</li>
+                    <li>"trailerNumber": "string",</li>
+                    <li>"truckNumber": "string",</li>
+                    <li>"signatureImage": "string",</li>
+                    <li>"eventType": 0,</li>
+                    <li>"caseId": "string",</li>
+                    <li>"invitationKey": "984a60774b9348de9f14544055fb8e7812072024023202706",</li>
+                    <li>"result": {</li>
+                    <ul class="sin-viñetas">
+                        <li>"threshold": 0,</li>
+                        <li>"score": 0</li>
+                    </ul>
+                    <li>},</li>
+                    <li>"deviceMetadata":
+                        "eyJhZGlkIjoiMTcyMDc5NDc2MjQyOC04YmFkNmRmNS04YzYwLTQ2YTQtYTRhNi1iOTAwNTk1NDFlZGEiLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTI2LjAuMC4wIFNhZmFyaS81MzcuMzYgRWRnLzEyNi4wLjAuMCJ9",
+                    </li>
+                    <li>"csid": "string",</li>
+                    <li>"riskId": 0,</li>
+                    <li>"closeAttempts": 0</li>
+                    <li>}'</li>
+                </ul>
+                <p style="color: blue"><strong>Note</strong>:
+                <ul>
+                    <li style="color: blue;">Replace the name of the sub customer in the "SubCustomer" field.</li>
+                </ul>
+                <h3>Schema</h3>
+                <h4>VerifyModelRequest {</h4>
+                <ul class="sin-viñetas">
+                    <span>SubCustomer</span><span style="color: red;">*</span><span>: string</span>
+                    <li>personId string</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>idNumber string</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>image string</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>poNumber string</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>trailerNumber string</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>truckNumber string</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>signatureImage string</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>eventType integer($int32)</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <span>caseId</span><span style="color: red;">*</span><span>: string</span>
+                    <ul class="sin-viñetas">
+                        <li>minLength: 1</li>
+                    </ul>
+                    <span>invitationKey</span><span style="color: red;">*</span><span>: string</span>
+                    <ul class="sin-viñetas">
+                        <li>minLength: 1</li>
+                    </ul>
+                    <li>result <strong>Result</strong> {</li>
+                    <ul class="sin-viñetas">
+                        <li>threshold number($float)</li>
+                        <li>score number($float)</li>
+                    </ul>
+                    <li>}</li>
+                    <li>deviceMetadata string</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>csid string</li>
+                    <li>deviceId integer($int32)</li>
+                    <li>riskId integer($int32)</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>closeAttempts integer($int32)</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>}</li>
+                </ul>
+                <hr>
+                <br>
+                <h3>Response</h3>
+                <h5>200 OK</h5>
+                <ul class="sin-viñetas">
+                    <li>{</li>
+                    <ul class="sin-viñetas">
+                        <li>"additionalProp1": [</li>
+                        <ul class="sin-viñetas">
+                            <li>"string"</li>
+                        </ul>
+                        <li>]</li>
+                        <li>"additionalProp2": [</li>
+                        <ul class="sin-viñetas">
+                            <li>"string"</li>
+                        </ul>
+                        <li>]</li>
+                        <li>"additionalProp3": [</li>
+                        <ul class="sin-viñetas">
+                            <li>"string"</li>
+                        </ul>
+                        <li>]</li>
+                    </ul>
+                    <li>}</li>
+                </ul>
+                <hr>
+                <h3>Exception codes</h3>
+                <h4>404 Not Found</h4>
+                <h6>Example value</h6>
+                <ul class="sin-viñetas">
+                    <li>{</li>
+                    <li>"Status": 1,</li>
+                    <li>"Message": "string",</li>
+                    <li>"Response": "string"</li>
+                    <li>}</li>
+                </ul>
+                <h6>Schema</h6>
+                <h6>StringResult {</h6>
+                <ul class="sin-viñetas">
+                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
+                    <ul class="sin-viñetas">
+                        <li>Enum:</li>
+                        <li>[1, 2, 3, 4, 5, 6, 7, 8, 500]</li>
+                    </ul>
+                    <li>message string</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>response string</li>
+                    <li></li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>}</li>
+                </ul>
+                <br>
+                <h4>412 Precondition Failed</h4>
+                <h6>Example value</h6>
+                <ul class="sin-viñetas">
+                    <li>{</li>
+                    <li>"Status": 1,</li>
+                    <li>"Message": "string",</li>
+                    <li>"Response": "string"</li>
+                    <li>}</li>
+                </ul>
+                <h6>Schema</h6>
+                <h6>ObjectResult {</h6>
+                <ul class="sin-viñetas">
+                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
+                    <ul class="sin-viñetas">
+                        <li>Enum:</li>
+                        <li>[1, 2, 3, 4, 5, 6, 7, 8, 500]</li>
+                    </ul>
+                    <li>message string</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>response {</li>
+                    <li>}</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>}</li>
+                </ul>
+                <br>
+                <h4>500 Internal Server Error</h4>
+                <h6>Example value</h6>
+                <ul class="sin-viñetas">
+                    <li>{</li>
+                    <li>"Status": 1,</li>
+                    <li>"Message": "string",</li>
+                    <li>"Response": "string"</li>
+                    <li>}</li>
+                </ul>
+                <h6>Schema</h6>
+                <h6>ObjectResult {</h6>
+                <ul class="sin-viñetas">
+                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
+                    <ul class="sin-viñetas">
+                        <li>Enum:</li>
+                        <li>[1, 2, 3, 4, 5, 6, 7, 8, 500]</li>
+                    </ul>
+                    <li>message string</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>response {</li>
+                    <li>}</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>}</li>
+                </ul>
+            </div>
+            <hr>
+</body>
+<footer class="text-center">
+    <div class="mb-2">
+        <small>
+            © 2024 ID Factory
+        </small>
+    </div>
+</footer>
+</div>
+</main>
+<!-- page-content" -->
+</div>
+<!-- page-wrapper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
