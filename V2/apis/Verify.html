@@ -132,6 +132,12 @@
                                     <li>
                                         <a href="../manuales/ENQuery.html">Query Rol Manual</a>
                                     </li>
+                                    <li>
+                                        <a href="../manuales/ENTechnicalRole.html">Technical Rol Manual</a>
+                                    </li>
+                                    <li>
+                                        <a href="../manuales/ENMinimumRequirements.html">Minimum Requirements</a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -257,52 +263,10 @@
                             <td>Text string</td>
                         </tr>
                         <tr>
-                            <td>image</td>
-                            <td>string</td>
-                            <td>No</td>
-                            <td></td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>poNumber</td>
-                            <td>string</td>
-                            <td>No</td>
-                            <td></td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>trailerNumber</td>
-                            <td>string</td>
-                            <td>No</td>
-                            <td></td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>truckNumber</td>
-                            <td>string</td>
-                            <td>No</td>
-                            <td></td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>signatureImage</td>
-                            <td>string</td>
-                            <td>No</td>
-                            <td></td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>eventType</td>
-                            <td>integer($int32)</td>
-                            <td>No</td>
-                            <td></td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
                             <td>caseId</td>
                             <td>string</td>
                             <td>No</td>
-                            <td></td>
+                            <td>This field receive the case id generated in liveness process</td>
                             <td>Text string</td>
                         </tr>
                         <tr>
@@ -312,18 +276,6 @@
                             <td>This field receive the invitation previously created in Invitations/Created endpoint.
                             </td>
                             <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>result</td>
-                            <td>string</td>
-                            <td>No</td>
-                            <td></td>
-                            <td>
-                                <ul class="sin-viñetas">
-                                    <li>threshold: 0</li>
-                                    <li>score: 0</li>
-                                </ul>
-                            </td>
                         </tr>
                         <tr>
                             <td>deviceMetadata</td>
@@ -383,20 +335,9 @@
                     <li>"subCustomer": "sub customer name",</li>
                     <li>"personId": "89766c4a-ecb3-4c4f-bb75-2e064661e0bf",</li>
                     <li>idNumber": "string",</li>
-                    <li>"image": "string",</li>
-                    <li>"poNumber": "string",</li>
-                    <li>"trailerNumber": "string",</li>
-                    <li>"truckNumber": "string",</li>
-                    <li>"signatureImage": "string",</li>
-                    <li>"eventType": 0,</li>
                     <li>"caseId": "string",</li>
                     <li>"invitationKey": "984a60774b9348de9f14544055fb8e7812072024023202706",</li>
                     <li>"result": {</li>
-                    <ul class="sin-viñetas">
-                        <li>"threshold": 0,</li>
-                        <li>"score": 0</li>
-                    </ul>
-                    <li>},</li>
                     <li>"deviceMetadata":
                         "eyJhZGlkIjoiMTcyMDc5NDc2MjQyOC04YmFkNmRmNS04YzYwLTQ2YTQtYTRhNi1iOTAwNTk1NDFlZGEiLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTI2LjAuMC4wIFNhZmFyaS81MzcuMzYgRWRnLzEyNi4wLjAuMCJ9",
                     </li>
