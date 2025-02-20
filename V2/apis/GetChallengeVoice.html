@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li class="header-menu">
-                            <span>Flujos SDK</span>
+                            <span>SDK Flows</span>
                         </li>
                         <li class="sidebar-dropdown">
                             <a href="#">
@@ -228,6 +228,7 @@
                                 </ul>
                             </div>
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -235,7 +236,7 @@
         <!-- sidebar-wrapper  -->
         <main class="page-content">
             <div class="container-fluid">
-                <h2><span class="badge badge-pill badge-success">POST</span> DocumentFrontSide</h2>
+                <h2><span class="badge badge-pill badge-success">POST</span> GetChallengeVoice</h2>
                 <hr>
                 <h3>Request</h3>
                 <div class="form-group col-md-12">
@@ -248,67 +249,39 @@
                             <th>Values</th>
                         </tr>
                         <tr>
-                            <td>SubCustomer</td>
+                            <td>subcustomer</td>
                             <td>string</td>
                             <td>Yes</td>
-                            <td>Defines the name of the subclient configured on the platform</td>
+                            <td>This field receives the name of the customer with whom the invitation will be made to be registered in the system.</td>
                             <td>Text string</td>
                         </tr>
                         <tr>
-                            <td>Uid</td>
-                            <td>string</td>
-                            <td>No</td>
-                            <td>This field receive the uid generated in before steps</td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>Image</td>
+                            <td>invitationKey</td>
                             <td>string</td>
                             <td>Yes</td>
-                            <td>Receives the base64 image of the front of the document</td>
-                            <td>Text string en base64</td>
+                            <td>This field receive the invitation previously created in Invitations/Created endpoint.</td>
+                            <td>Text string</td>
                         </tr>
                         <tr>
-                            <td>InvitationKey</td>
+                            <td>language</td>
                             <td>string</td>
                             <td>Yes</td>
-                            <td>Unique identifier of the invitation</td>
+                            <td>Language in which the challenge will be displayed.</td>
                             <td>Text string</td>
                         </tr>
                         <tr>
-                            <td>Email</td>
+                            <td>uid</td>
                             <td>string</td>
-                            <td>No</td>
-                            <td>Email associated to the user who creates the invitation</td>
+                            <td>Yes</td>
+                            <td>This field receive the uid generated in before steps.</td>
                             <td>Text string</td>
                         </tr>
                         <tr>
-                            <td>numberPhone</td>
-                            <td>string</td>
-                            <td>No</td>
-                            <td>Number phone of the user created in the invitation.</td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>DeviceId</td>
+                            <td>closeAttempts</td>
                             <td>integer($int32)</td>
-                            <td>No</td>
-                            <td>Identifier registered on the device platform</td>
-                            <td>Returns an Integer</td>
-                        </tr>
-                        <tr>
-                            <td>documentType</td>
-                            <td>integer($int32)</td>
-                            <td>No</td>
-                            <td>User document type</td>
-                            <td>Returns an Integer</td>
-                        </tr>
-                        <tr>
-                            <td>maxDocumentAttempts</td>
-                            <td>boolean</td>
-                            <td>No</td>
-                            <td>If a maximum number of attempts was set for document upload.</td>
-                            <td>True or false</td>
+                            <td>Yes</td>
+                            <td>Number of attempts configured by the subclient to capture audio.</td>
+                            <td>Integer</td>
                         </tr>
                         <tr>
                             <td>Authorization</td>
@@ -322,73 +295,28 @@
                 <hr>
                 <h3>Example</h3>
                 <ul class="sin-viñetas">
-                    <li>curl -X 'POST' \</li>
-                    <li>'https://dev.idfactory.me/Enroll/api/DocumentFrontSide'</li>
+                    <li>curl -x \ 'https://dev.idfactory.me/Enroll/api/GetChallengeVoice' \</li>
                     <li>-H 'accept: application/json' \</li>
-                    <li>-H 'Authorization: bearer
-                        gIAE8XbkJAgTakwCvFFA-50qXeDJLa9rqP1aQydozHSLf0fQXd82Xwbnxq_MqIsggs0t2S2QhDzXFil23C2fv8-glZM4KtS-AYha1zSJG9sZGk9Gvlm82Cayp7I8Pq3D7C1xU0pa0ywvBs35AadeqaWATyu_eVF-TR8yangNNm_chcm6LKloRE8YTjdSD_cletxE80gtIxhiEAlAeyonoGJXXnGuD2kTlTQStSNWPWnUvEHAjwPin2fZybKKWM6eRZRPoD6ftXiXhre25-8eZZ8eumkulA0UJlGrKvwRPL9vdPWujo4junPo2W3tD_L0ApKvDybBarBMZz7SKZypZA'
-                    </li>
+                    <li>-H 'Authorization: Bearer LSJBFÁERUH15AD4G' \</li>
                     <li>-H 'Content-Type: application/json' \</li>
                     <li>-d '{</li>
-                    <ul class="sin-viñetas">
-                        <li>"subCustomer": "subcustomer name",</li>
-                        <li>"Uid": "FC3C8FB492DF4BFB82E59448051FDF7812072024014614640",</li>
-                        <li>"image": "string",</li>
-                        <li>"invitationKey": "sd65f49r823d165f4g9685sd6f54dhguk8",</li>
-                        <li>"email": "email@email.com",</li>
-                        <li>"numberPhone": "012045078",</li>
-                        <li>"deviceId": 0,</li>
-                        <li>"documentType": 0,</li>
-                        <li>"maxDocumentAttempts": true</li>
-                    </ul>
+                    <li>"subCustomer": "string",</li>
+                    <li>"invitationKey": "string",</li>
+                    <li>"language": "string",</li>
+                    <li>"uid": "string",</li>
+                    <li>"closeAttempts": 0</li>
                     <li>}'</li>
                 </ul>
                 <p style="color: blue"><strong>Note</strong>:
                 <ul>
-                    <li style="color: blue;">Replace the name of the sub customer in the "SubCustomer" field.</li>
+                    <li style="color: blue">Replace the name of the sub customer in the "SubCustomer" field.</li>
+                    <li style="color: blue">In the "invitationKey" field replace by the invitation key number.</li>
+                    <li style="color: blue">In the "language" field replace with the language of the challenge.</li>
+                    <li style="color: blue">In the "uid" field replace with the uid number.</li>
+                    <li style="color: blue">In the "closeAttempts" field replace with the number of attempts you will allow.</li>
                 </ul>
                 </p>
-                <h3>Schema</h3>
-                <h4>DocumentValidationModel</h4>
-                <ul class="sin-viñetas">
-                    <li>{</li>
-                    <span>SubCustomer</span><span style="color: red;">*</span><span>: string</span>
-                    <ul class="sin-viñetas">
-                        <li>minLength: 1</li>
-                    </ul>
-                    <li>Uid: string</li>
-                    <ul class="sin-viñetas">
-                        <li>nullable: true</li>
-                    </ul>
-                    <span>Image</span><span style="color: red;">*</span><span>: string</span>
-                    <ul class="sin-viñetas">
-                        <li>minLength: 1</li>
-                    </ul>
-                    <span>InvitationKey</span><span style="color: red;">*</span><span>: string</span>
-                    <ul class="sin-viñetas">
-                        <li>minLength: 1</li>
-                    </ul>
-                    <li>Email: string
-                        <ul class="sin-viñetas">
-                            <li>maxLength: 200</li>
-                            <li>minLength: 0</li>
-                            <li>nullable: true</li>
-                        </ul>
-                    </li>
-                    <li><u>NumberPhone</u>: string
-                        <ul class="sin-viñetas">
-                            <li>maxLength: 400</li>
-                            <li>minLength: 0</li>
-                            <li>nullable: true</li>
-                        </ul>
-                    </li>
-                    <li>DeviceId: integer($int32)</li>
-                    <li>DocumentType: integer($int32)</li>
-                    <li>maxDocumentAttempts: boolean</li>
-                    <li>}</li>
-                </ul>
                 <hr>
-                <br>
                 <h3>Response</h3>
                 <h4>200 OK</h4>
                 <h6>Example value</h6>
@@ -396,26 +324,41 @@
                     <li>{</li>
                     <li>"Status": 1,</li>
                     <li>"Message": "string",</li>
-                    <li>"Response": "string"</li>
+                    <li>"Response": {
+                        <ul>
+                            <li>"challengeText": "string",</li>
+                            <li>"uid": "string"</li>
+                        </ul>
+                        }
+                    </li>
                     <li>}</li>
                 </ul>
                 <h6>Schema</h6>
-                <h6>StringResult {</h6>
+                <h6>GetChallengeRespModelResult {</h6>
                 <ul class="sin-viñetas">
                     <li>status <strong>EResult</strong> EResult integer($int32)</li>
                     <ul class="sin-viñetas">
                         <li>Enum:</li>
-                        <li>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]</li>
+                        <li>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]</li>
                     </ul>
                     <li>message string</li>
                     <ul class="sin-viñetas">
                         <li>nullable: true</li>
                     </ul>
-                    <li>response {</li>
+                    <li>response <strong>GetChallengeRespModel</strong> {</li>
                     <ul class="sin-viñetas">
+                        
+                        <li>challengeText string</li>
+                        <ul class="sin-viñetas">
+                            <li>nullable: true</li>
+                        </ul>
+                        <li>uid string</li>
+                        <ul class="sin-viñetas">
+                            <li>nullable: true</li>
+                        </ul>
                         <li>}</li>
-                        <li>nullable: true</li>
                     </ul>
+                    <li>}</li>
                 </ul>
                 <hr>
                 <br>
@@ -435,7 +378,7 @@
                     <li>status <strong>EResult</strong> EResult integer($int32)</li>
                     <ul class="sin-viñetas">
                         <li>Enum:</li>
-                        <li>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]</li>
+                        <li>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]</li>
                     </ul>
                     <li>message string</li>
                     <ul class="sin-viñetas">
@@ -444,7 +387,6 @@
                     <li>response {</li>
                     <ul class="sin-viñetas">
                         <li>}</li>
-                        <li>nullable: true</li>
                     </ul>
                     <li>}</li>
                 </ul>
@@ -457,55 +399,26 @@
                     <li>"Message": "string",</li>
                     <li>"Response": "string"</li>
                     <li>}</li>
+
                 </ul>
                 <h6>Schema</h6>
                 <h6>ObjectResult {</h6>
-                <ul class="sin-viñetas">
-                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
                     <ul class="sin-viñetas">
-                        <li>Enum:</li>
-                        <li>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]</li>
-                    </ul>
-                    <li>message string</li>
-                    <ul class="sin-viñetas">
-                        <li>nullable: true</li>
-                    </ul>
-                    <li>response {</li>
-                    <ul class="sin-viñetas">
+                        <li>status <strong>EResult</strong> EResult integer($int32)</li>
+                        <ul class="sin-viñetas">
+                            <li>Enum:</li>
+                            <li>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]</li>
+                        </ul>
+                        <li>message string</li>
+                        <ul class="sin-viñetas">
+                            <li>nullable: true</li>
+                        </ul>
+                        <li>response {</li>
+                        <ul class="sin-viñetas">
+                            <li>}</li>
+                        </ul>
                         <li>}</li>
-                        <li>nullable: true</li>
                     </ul>
-                    <li>}</li>
-                </ul>
-                <br>
-                <h4>412 Precondition Failed</h4>
-                <h6>Example value</h6>
-                <ul class="sin-viñetas">
-                    <li>{</li>
-                    <li>"Status": 1,</li>
-                    <li>"Message": "string",</li>
-                    <li>"Response": "string"</li>
-                    <li>}</li>
-                </ul>
-                <h6>Schema</h6>
-                <h6>ObjectResult {</h6>
-                <ul class="sin-viñetas">
-                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
-                    <ul class="sin-viñetas">
-                        <li>Enum:</li>
-                        <li>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]</li>
-                    </ul>
-                    <li>message string</li>
-                    <ul class="sin-viñetas">
-                        <li>nullable: true</li>
-                    </ul>
-                    <li>response {</li>
-                    <ul class="sin-viñetas">
-                        <li>}</li>
-                        <li>nullable: true</li>
-                    </ul>
-                    <li>}</li>
-                </ul>
                 <br>
                 <h4>500 Internal Server Error</h4>
                 <h6>Example value</h6>
@@ -515,30 +428,30 @@
                     <li>"Message": "string",</li>
                     <li>"Response": "string"</li>
                     <li>}</li>
+
                 </ul>
                 <h6>Schema</h6>
                 <h6>ObjectResult {</h6>
-                <ul class="sin-viñetas">
-                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
                     <ul class="sin-viñetas">
-                        <li>Enum:</li>
-                        <li>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]</li>
-                    </ul>
-                    <li>message string</li>
-                    <ul class="sin-viñetas">
-                        <li>nullable: true</li>
-                    </ul>
-                    <li>response {</li>
-                    <ul class="sin-viñetas">
+                        <li>status <strong>EResult</strong> EResult integer($int32)</li>
+                        <ul class="sin-viñetas">
+                            <li>Enum:</li>
+                            <li>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]</li>
+                        </ul>
+                        <li>message string</li>
+                        <ul class="sin-viñetas">
+                            <li>nullable: true</li>
+                        </ul>
+                        <li>response {</li>
+                        <ul class="sin-viñetas">
+                            <li>}</li>
+                        </ul>
                         <li>}</li>
-                        <li>nullable: true</li>
                     </ul>
-                    <li>}</li>
-                </ul>
+                <br>
+                <hr>
             </div>
         </main>
-    <hr>
-    <br>
 </body>
 <footer class="text-center">
     <div class="mb-2">
