@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
-    <title>ID Factory</title>
+    <title>Sidebar template</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" />
-    <script src="js/scripts.js" defer></script>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="../js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -35,11 +35,10 @@
                             <a href="../index.html">
                                 <i class="fa fa-book"></i>
                                 <span>Glosary</span>
-                                <!--<span class="badge badge-pill badge-primary">Beta</span> -->
                             </a>
                         </li>
                         <li class="header-menu">
-                            <span>SDK Flows</span>
+                            <span>SDK flows</span>
                         </li>
                         <li class="sidebar-dropdown">
                             <a href="#">
@@ -50,21 +49,21 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="../flujos/FlujoGeneralEnroll.html">General
+                                        <a href="FlujoGeneralEnroll.html">General
                                             <!-- <span class="badge badge-pill badge-success">Pro</span> -->
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../flujos/FlujoGeneralEnrollEcuador.html">Ecuador</a>
+                                        <a href="FlujoGeneralEnrollEcuador.html">Ecuador</a>
                                     </li>
                                     <li>
-                                        <a href="../flujos/FlujoGeneralEnrollPeru.html">Perú</a>
+                                        <a href="FlujoGeneralEnrollPeru.html">Perú</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li class="sidebar-dropdown">
-                            <a href="../flujos/Verify.html">
+                            <a href="Verify.html">
                                 <i class="fa fa-circle"></i>
                                 <span>Verify</span>
                                 <!-- <span class="badge badge-pill badge-danger">3</span> -->
@@ -82,17 +81,17 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="../flujos/flujoGeneralWebIdFactory.html">IdFactory Web page 
+                                        <a href="flujoGeneralWebIdFactory.html">IdFactory Web page 
                                             <!-- <span class="badge badge-pill badge-success">Pro</span> -->
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../flujos/flujoGeneralWebCustomer.html">Customer Web page 
+                                        <a href="flujoGeneralWebCustomer.html">Customer Web page 
                                             <!-- <span class="badge badge-pill badge-success">Pro</span> -->
                                         </a>
                                     </li>
                                     <!--<li>
-                                        <a href="../flujos/EcuadorWeb.html">Components for web page</a>
+                                        <a href="FlujoComponentesImagenesEnroll.html">Components for image</a>
                                     </li>-->
                                 </ul>
                             </div>
@@ -106,7 +105,7 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="../flujos/FlujoComponentesImagenesVerify.html">Components for image
+                                        <a href="FlujoComponentesImagenesVerify.html">Verify web page
                                             <!-- <span class="badge badge-pill badge-success">Pro</span> -->
                                         </a>
                                     </li>
@@ -125,18 +124,18 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="ENAdministrator.html">Administrator Rol Manual
+                                        <a href="../manuales/ENAdministrator.html">Administrator Rol Manual
                                             <!-- <span class="badge badge-pill badge-success">Pro</span> -->
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="ENQuery.html">Query Rol Manual</a>
+                                        <a href="../manuales/ENQuery.html">Query Rol Manual</a>
                                     </li>
                                     <li>
-                                        <a href="ENTechnicalRole.html">Technical Rol Manual</a>
+                                        <a href="../manuales/ENTechnicalRole.html">Technical Rol Manual</a>
                                     </li>
                                     <li>
-                                        <a href="ENMinimumRequirements.html">Minimum Requirements</a>
+                                        <a href="../manuales/ENMinimumRequirements.html">Minimum Requirements</a>
                                     </li>
                                 </ul>
                             </div>
@@ -152,7 +151,6 @@
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-
                                     <li>
                                         <a href="../apis/AuthorizationGetToken.html">
                                             <span>AuthorizationGetToken</span>
@@ -206,7 +204,7 @@
                                     </li>
                                     <li>
                                         <a href="../apis/InvitationsVerify.html">
-                                            <span>Invitations/verify</span>
+                                            <span>Invitations/Verify</span>
                                         </a>
                                     </li>
                                     <li>
@@ -239,25 +237,14 @@
         <!-- sidebar-wrapper  -->
         <main class="page-content">
             <div class="container-fluid">
-                <h2>Glosary</h2>
+                <h2>General Web Flow</h2>
                 <hr>
-                <div class="row">
-                    <ul>
-                        <li><strong>Template</strong>: File containing the record of biometric minutiae or characteristic features of a biometric pattern.</li>
-                        <li><strong>Custom elements</strong>: A set of APIs JavaScript that allow you to define custom elements and their behavior, which then can be used as desired in the user interface.</li>
-                        <li><strong>Enroll</strong>: It is a process in which the registration of a facial minutiae (template) for later comparisons.</li>
-                        <li><strong>Verify</strong>: It is a process by which two templates are compared (1:1), one of the templates comes from the interaction about which there is doubt and the other template corresponds to the one previously stored in the enrollment process.</li>
-                        <li><strong>Transaction</strong>: Each interaction of a user with the platform searching performing an enrollment or verification process is recorded on our platform with a unique incremental number which we will call transaction or TX, regardless of the result of it.</li>
-                        <li><strong>Invitation key</strong>: Unique identifier of the invitation.</li>
-                        <li><strong>CaseId</strong>: This field receive the case id generated in liveness process.</li>
-                        <li><strong>Endpoint</strong>: In software development and APIs, an endpoint refers to a specific URL that links to a particular resource. When interacting with an API, endpoints can perform specific activities such as requesting data or triggering a process.</li>
-                        <li><strong>Api</strong>: Is a ser of rules or protocols that enables software applications to communicate with each other to exchange data, features, and functionality. APIs simplify and accelerate application and software development by allowing developers to integrate data, services, and capabilities from other applications, instead of developing them from scratch.</li>
-                        <li><strong>Enviroment</strong>: DEV, QA, Sandbox, production</li>
-                        <li><strong>Routine</strong>: A sequence of instructions that does not vary and that is part of a program and can be used repeatedly.</li>
-                        <li><strong>SDK</strong>: Software Development Kit, is a collection of software development tools in one installable package. It typically includes everything a developer needs to build applications for specific platforms or programming languages, such as compilers, debuggers, documentation, libraries, and code samples.</li>
-                    </ul>
+                <div>
+                    <img src="../imgs/CustomerWebPageFlow.png" class="card-img-top rounded-0" alt="Flujo general">
                 </div>
                 <hr>
+            </div>
+        </main>
 </body>
 <footer class="text-center">
     <div class="mb-2">
