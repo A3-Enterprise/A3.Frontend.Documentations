@@ -81,12 +81,12 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="flujoGeneralWebIdFactory.html">IdFactory Web page 
+                                        <a href="flujoGeneralWebIdFactory.html">IdFactory Web page
                                             <!-- <span class="badge badge-pill badge-success">Pro</span> -->
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="flujoGeneralWebCustomer.html">Customer Web page 
+                                        <a href="flujoGeneralWebCustomer.html">Integration by routine
                                             <!-- <span class="badge badge-pill badge-success">Pro</span> -->
                                         </a>
                                     </li>
@@ -237,11 +237,58 @@
         <!-- sidebar-wrapper  -->
         <main class="page-content">
             <div class="container-fluid">
-                <h2>General Web Flow</h2>
+                <h2>Web component integration by routine</h2>
                 <hr>
                 <div>
                     <img src="../imgs/CustomerWebPageFlow.png" class="card-img-top rounded-0" alt="Flujo general">
                 </div>
+                <hr>
+                <p><strong>Steps</strong></p>
+                <ul>
+                    <li>Step 1:</li>
+                    <li class="sin-viñetas">Launch script: https://id-webcomponent-sandbox-factory.s3.amazonaws.com/demo/demo.esm.js</li>
+                </ul>
+                <ul>
+                    <li>Step 2:</li>
+                    <li class="sin-viñetas">Create tag to contain the component</li>
+                    <code>&lt;div id='container-component'&gt;&lt;/div&gt;</code>
+                </ul>
+                <ul>
+                    <li>Step 3:</li>
+                    <li class="sin-viñetas">Launch Web Component: </li>
+                    <code>
+                        export const handleComponentGeneral = (token, url) => {
+                            const container = document.getElementById('container-component')
+                            return container.insertAdjacentHTML('afterbegin',
+                                `
+                        <genie-component-general 
+                                    url="${url}"
+                                    token="${token}"
+                        >
+                        </genie-component-general>
+                                `)
+                        }
+                    </code>
+                </ul>
+                <ul>    
+                    <li>Step 4:</li>
+                    <li class="sin-viñetas">Add this event listener: </li>
+                    <code>document.addEventListener('genieEventGeneral', handleGenieEventEnroll);</code>
+                    <li class="sin-viñetas">Possible responses:</li>
+                    <ul class="sin-viñetas">
+                        <li>Succes</li>
+                        <li>Failure</li>
+                        <li>Failure-Liveness</li>
+                        <li>Pending</li>
+                    </ul>
+                </ul>
+                <ul>
+                    <li>Step 5:</li>
+                    <li class="sin-viñetas">Destruction of web component</li>
+                    <li class="sin-viñetas">Remove all tags or artifacts associated with web component</li>
+                </ul>
+                <hr>
+                <p><strong>Example of repository:</strong> https://github.com/A3-Enterprise/A3.Frontend.ImplementationWebComponent</p>
                 <hr>
             </div>
         </main>
