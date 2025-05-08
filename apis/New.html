@@ -226,6 +226,26 @@
                                             <span>NewVoice</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="TransactionFraudRegister.html">
+                                            <span>Fraud Register</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TransactionFraudLogin.html">
+                                            <span>Fraud Login</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TransactionFraudTransaction.html">
+                                            <span>Fraud transaction</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TransactionFraudAddPayMethod.html">
+                                            <span>Fraud Add Pay Method</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -338,16 +358,12 @@
                 <hr>
                 <h3>Example</h3>
                 <ul class="sin-viñetas">
-                    <li>curl -X</li>
+                    <li>curl -X 'POST' \</li>
                     <li>'https://sandbox.idfactory.me/Enroll/api/New' \</li>
                     <li>-H 'accept: application/json' \</li>
                     <li>-H 'Authorization: bearer UXf8L-P0riyUCT2W5-X8CBUyyPBYQNLYAyZl3dp4n3_BSTyG1R0Ak-</li>
                     <li>-H 'Content-Type: application/json' \</li>
-                    <li>-D '{ "SubCustomer": "SubcustomerName", "InvitationKey":
-                        "077dd413f862436dac973e3fc99aae6211072024074922106", "CaseId":
-                        "d4e0e7ed-5940-4e36-8384-9b1a90dec7a3", "DeviceMetadata":
-                        "eyJhZGlkIjoiMTcxNzgwMjAwMzM2NC0xNTIyYzY4OS01ZmM3LTQ1NDctYjc3NS05ZjYyNDAxZWE5ZTMiLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTI2LjAuMC4wIFNhZmFyaS81MzcuMzYgRWRnLzEyNi4wLjAuMCJ9"}'
-                    </li>
+                    <li>-d '{</li>
                     <li>"subCustomer": "sub customer name",</li>
                     <li>"customerPhoto": "sdf46s2d1f65s4874tw6521f3s1",</li>
                     <li>"invitationKey": "077dd413f862436dac973e3fc99aae6211072024074922106",</li>
@@ -355,11 +371,11 @@
                     <li>"numberPhone": "0002225588",</li>
                     <li>"uid": "string",</li>
                     <li>"caseId": "string",</li>
-                    <li>"deviceMetadata":
-                        "eyJhZGlkIjoiMTcxNzgwMjAwMzM2NC0xNTIyYzY4OS01ZmM3LTQ1NDctYjc3NS05ZjYyNDAxZWE5ZTMiLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTI2LjAuMC4wIFNhZmFyaS81MzcuMzYgRWRnLzEyNi4wLjAuMCJ9",
+                    <li>"deviceMetadata": "eyJhZGlkIjoiMTcxNzgwMjAwMzM2NC0xNTIyYzY4OS01ZmM3LTQ1NDctYjc3NS05ZjYyNDAxZWE5ZTMiLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTI2LjAuMC4wIFNhZmFyaS81MzcuMzYgRWRnLzEyNi4wLjAuMCJ9",
                     </li>
                     <li>"deviceId": 0,</li>
                     <li>"closeAttempts": 3</li>
+                    <li>}'</li>
                 </ul>
                 <p style="color: blue"><strong>Note</strong>:
                 <ul>

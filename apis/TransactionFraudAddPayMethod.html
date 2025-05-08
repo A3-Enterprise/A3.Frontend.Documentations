@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>ID Factory</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="../js/scripts.js" defer></script>
+</head>
+
+<body>
+    <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="../../index.html">ID Factory</a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <!-- sidebar-header  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="../index.html">
+                                <i class="fa fa-book"></i>
+                                <span>Glosary</span>
+                            </a>
+                        </li>
+                        <li class="header-menu">
+                            <span>SDK flows</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-circle"></i>
+                                <span>Enroll</span>
+                                <!-- <span class="badge badge-pill badge-warning">New</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="../flujos/FlujoGeneralEnroll.html">General
+                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/FlujoGeneralEnrollEcuador.html">Ecuador</a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/FlujoGeneralEnrollPeru.html">Perú</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="../flujos/Verify.html">
+                                <i class="fa fa-circle"></i>
+                                <span>Verify</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                        </li>
+                        <li class="header-menu">
+                            <span>Web flows</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-square"></i>
+                                <span>Enroll</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="../flujos/flujoGeneralWebIdFactory.html">IdFactory Web page 
+                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../flujos/flujoGeneralWebCustomer.html">Integration by routine
+                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                        </a>
+                                    </li>
+                                    <!--<li>
+                                        <a href="../flujos/EcuadorWeb.html">Components for web page</a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-square"></i>
+                                <span>Verify</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="../flujos/FlujoComponentesImagenesVerify.html">Verify web page
+                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu">
+                            <span>Documents</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>User Manuals</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="../manuales/ENAdministrator.html">Administrator Rol Manual
+                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../manuales/ENQuery.html">Query Rol Manual</a>
+                                    </li>
+                                    <li>
+                                        <a href="../manuales/ENTechnicalRole.html">Technical Rol Manual</a>
+                                    </li>
+                                    <li>
+                                        <a href="../manuales/ENMinimumRequirements.html">Minimum Requirements</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu">
+                            <span>Technical documentation</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Api's</span>
+                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="AuthorizationGetToken.html">
+                                            <span>GetToken</span>
+                                            <!--<span class="badge badge-pill badge-primary">Beta</span> -->
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Back.html">
+                                            <span>Back</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Close.html">
+                                            <span>Close</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FindByNumberIdSucces.html">
+                                            <span>FindByNumberIdSucces</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Front.html">
+                                            <span>Front</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="GetImageByIdIdentity.html">
+                                            <span>GetImageById Identity</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="GetImageByIdTransaction.html">
+                                            <span>GetImageById Transact</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="GetUidLiveness.html">
+                                            <span>GetUidLiveness</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Enroll.html">
+                                            <span>Invitations/Enroll</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="New.html">
+                                            <span>New</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="InvitationsVerify.html">
+                                            <span>Invitations/Verify</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Validation{id}.html">
+                                            <span>GetTransactionById</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Verify.html">
+                                            <span>Verify</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="GetChallengeVoice.html">
+                                            <span>GetChallengeVoice</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="NewVoice.html">
+                                            <span>NewVoice</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TransactionFraudRegister.html">
+                                            <span>Fraud Register</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TransactionFraudLogin.html">
+                                            <span>Fraud Login</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TransactionFraudTransaction.html">
+                                            <span>Fraud transaction</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TransactionFraudAddPayMethod.html">
+                                            <span>Fraud Add Pay Method</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- sidebar-wrapper  -->
+        <main class="page-content">
+            <div class="container-fluid">
+                <h2><span class="badge badge-pill badge-success">POST</span> Add Pay Method</h2>
+                <hr>
+                <h3>Request</h3>
+                <div class="form-group col-md-12">
+                    <table id="glosary">
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                            <th>Description</th>
+                            <th>Values</th>
+                        </tr>
+                        <tr>
+                            <td>SubCustomer</td>
+                            <td>string</td>
+                            <td>Yes</td>
+                            <td>Defines the name of the subclient configured on the platform</td>
+                            <td>Text string</td>
+                        </tr>
+                    </table>
+                    <h4>session</h4>
+                    <table id="glosary">
+                        <tr>
+                            <td>idSession</td>
+                            <td>string</td>
+                            <td>Yes</td>
+                            <td>The web session the user is in</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>timeSession</td>
+                            <td>integer($int32)</td>
+                            <td>No</td>
+                            <td>The timestamp when the session was issued in Unix epoch format</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>channel</td>
+                            <td>string</td>
+                            <td>No</td>
+                            <td>User channel, web or mobile</td>
+                            <td>Text string</td>
+                        </tr>
+                    </table>
+                    <h4>addPaymentMethod</h4>
+                    <table id="glosary">
+                        <tr>
+                            <td>checkpointType</td>
+                            <td>string</td>
+                            <td>Yes</td>
+                            <td>The type of checkpoint to invoke.</td>
+                            <td>Text string</td>
+                        </tr>
+                    </table>
+                    <h4>user</h4>
+                    <table id="glosary">
+                        <tr>
+                            <td>user_id</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>A unique identifier of the user, as given by the app</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>User email</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>userFullName</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>User's full name</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>userName</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>User name</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>isKYCVerified</td>
+                            <td>string</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>isEmailVerified</td>
+                            <td>string</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>phoneUser</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Phone user</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>isPhoneUserVerified</td>
+                            <td>string</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>registrationDate</td>
+                            <td>integer($int64)</td>
+                            <td></td>
+                            <td>Date the user registered</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>externalOnboardingScore</td>
+                            <td>integer($int32)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <h4>userAddress</h4>
+                    <table id="glosary">
+                        <tr>
+                            <td>firstName</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's first name</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>lastName</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's first name</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>addressLine1</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's first line of address</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>addressLine2</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's second line of address</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>city</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's city</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>state</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's state</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>postalCode</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's postal Code</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>country</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's country</td>
+                            <td>(ISO 3166-1 alpha-2)</td>
+                        </tr>
+                    </table>
+                    <h4>billingAddress</h4>
+                    <table id="glosary">
+                        <tr>
+                            <td>firstName</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's first name</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>lastName</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's first name</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>addressLine1</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's first line of address</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>addressLine2</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's second line of address</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>city</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's city</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>state</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's state</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>country</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's country</td>
+                            <td>(ISO 3166-1 alpha-2)</td>
+                        </tr>
+                        <tr>
+                            <td>postalCode</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Receiver's postal Code</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>phoneNumber</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Phone number</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </table>
+                <h4>payment</h4>
+                <table id="glosary">
+                        <tr>
+                            <td>paymentMethodType</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>A unique identifier representing this specific payment method, as given by the app</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>processor</td>
+                            <td>string</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>fullNameOnCard</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Full name that appears on the card</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>paymentMethodId</td>
+                            <td>string</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                </table>
+                <h4>creditCardDetail</h4>
+                <table id="glosary">
+                        <tr>
+                            <td>bin</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Bank Identification Number. Refers to the first four to six numbers on a payment card. This set of numbers identifies the financial institution that issues the card</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>lastFourDigit</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>last 4 digits of credit card number</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>yearExpiryDate</td>
+                            <td>integer($int32)</td>
+                            <td></td>
+                            <td>Credit card expiration year.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>monthExpiryDate</td>
+                            <td>integer($int32)</td>
+                            <td></td>
+                            <td>Month of expiration of the credit card.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>cardToken</td>
+                            <td>string</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>cardId</td>
+                            <td>string</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                </table>
+                <h4>bankAccountDetails</h4>
+                <table id="glosary">
+                        <tr>
+                            <td>bankAccountNumber</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Unique number that identifies the bank.</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>bankAccountFullname</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Full name of the bank</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>bankAccountBsb</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>(Bank-State-Branch) is a six-digit numeric code that identifies individual financial institutions and branches within Australia</td>
+                            <td>Text string</td>
+                        </tr>
+                </table>
+                <h4>webParams</h4>
+                <table id="glosary">
+                        <tr>
+                            <td>checkpoint</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>Indicates the request's relevant checkpoint</td>
+                            <td>'LOGIN', 'REGISTER', 'TRANSACTION' or 'ADD_PAYMENT_METHOD'</td>
+                        </tr>
+                        <tr>
+                            <td>version</td>
+                            <td>number($double)</td>
+                            <td></td>
+                            <td>The API version invoked</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>user_id</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>A unique identifier of the user, as given by the app</td>
+                            <td>Text string</td>
+                        </tr>
+                    </table>
+                </div>
+                <hr>
+                <h3>Example</h3>
+                <ul class="sin-viñetas">
+                    <li>curl -X 'POST' \</li>
+                    <li>'https://dev.idfactory.me/TransactionFraud/api/AddPaymentMethod' \</li>
+                    <li>-H 'accept: application/json' \</li>
+                    <li>-H 'Authorization: Bearer AKFGBAERUIPG65465' \</li>
+                    <li>-H 'Content-Type: application/json' \</li>
+                    <li>-d '{</li>
+                    <li>"subCustomer": "string",</li>
+                    <li>"session": {
+                        <ul class="sin-viñetas">
+                            <li>"idSession": "string",</li>
+                            <li>"timeSession": 0,</li>
+                            <li>"channel": "string"</li>
+                        </ul>
+                    </li>
+                    <li>},</li>
+                    <li>"addPaymentMethod": {
+                        <ul class="sin-viñetas">
+                            <li>"checkpointType": "string",</li>
+                            <li>"user": {
+                                <ul class="sin-viñetas">
+                                    <li>"userId": "string",</li>
+                                    <li>"email": "string",</li>
+                                    <li>"userFullName": "string",</li>
+                                    <li>"userName": "string",</li>
+                                    <li>"isKYCVerified": "string",</li>
+                                    <li>"isEmailVerified": "string",</li>
+                                    <li>"phoneUser": "string",</li>
+                                    <li>"isPhoneUserVerified": "string",</li>
+                                    <li>"registrationDate": 0,</li>
+                                    <li>"externalOnboardingScore": 0,</li>
+                                    <li>"userAddress": {
+                                        <ul class="sin-viñetas">
+                                            <li>"firstName": "string",</li>
+                                            <li>"lastName": "string",</li>
+                                            <li>"addressLine1": "string",</li>
+                                            <li>"addressLine2": "string",</li>
+                                            <li>"city": "string",</li>
+                                            <li>"state": "string",</li>
+                                            <li>"postalCode": "string",</li>
+                                            <li>"country": "string"</li>
+                                        </ul>
+                                    </li>
+                                    <li>}</li>
+                                </ul>
+                                <li>},</li> 
+                            </li>
+                            <li>"billingAddress": {
+                                <ul class="sin-viñetas">
+                                    <li>"firstName": "string",</li>
+                                    <li>"lastName": "string",</li>
+                                    <li>"addressLine1": "string",</li>
+                                    <li>"addressLine2": "string",</li>
+                                    <li>"city": "string",</li>
+                                    <li>"state": "string",</li>
+                                    <li>"country": "string",</li>
+                                    <li>"postalCode": "string",</li>
+                                    <li>"phoneNumber": "string"</li>
+                                </ul>
+                                <li>},</li>
+                            </li>
+                            <li>"payment": {
+                                <ul class="sin-viñetas">
+                                    <li>"paymentMethodType": "string",</li>
+                                    <li>"processor": "string",</li>
+                                    <li>"fullNameOnCard": "string",</li>
+                                    <li>"paymentMethodId": "string",</li>
+                                    <li>"creditCardDetail": {
+                                        <ul class="sin-viñetas">
+                                            <li>"bin": "string",</li>
+                                            <li>"lastFourDigit": "string",</li>
+                                            <li>"yearExpiryDate": 0,</li>
+                                            <li>"monthExpiryDate": 0,</li>
+                                            <li>"cardToken": "string",</li>
+                                            <li>"cardId": "string"</li>
+                                        </ul>
+                                        <li>},</li>
+                                    </li>
+                                    <li>"bankAccountDetails": {
+                                        <ul class="sin-viñetas">
+                                            <li>"bankAccountNumber": "string",</li>
+                                            <li>"bankAccountFullname": "string",</li>
+                                            <li>"bankAccountBsb": "string"</li>
+                                            <li>}</li>
+                                        </ul>
+                                    </li>
+                                    <li>}</li>
+                                </ul>
+                                <li>},</li>
+                            </li>
+                            <li>"webParams": {
+                                <ul class="sin-viñetas">
+                                    <li>"checkpoint": "string",</li>
+                                    <li>"version": 0,</li>
+                                    <li>"user_id": "string"</li>
+                                </ul>
+                                <li>}</li>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>}'</li>
+                </ul>
+                <p style="color: blue"><strong>Note</strong>:
+                <ul>
+                    <li style="color: blue;">Replace for name of the sub customer in the "SubCustomer" field.</li>
+                    <li style="color: blue;">Replace for your id number in the "identificationNumber" field</li>
+                    <li style="color: blue;">Replace for id of identification type in the "identificationType" field
+                    </li>
+                </ul>
+                </p>
+                <hr>
+                <br>
+                <h3>Response</h3>
+                <h4>200 Success</h4>
+                <h6>Example value</h6>
+                <ul class="sin-viñetas">
+                    <li>{</li>
+                    <li>"Status": 1,</li>
+                    <li>"Message": "string",</li>
+                    <li>"Response": {
+                        <ul class="sin-viñetas">
+                            <li>"status": "string",</li>
+                            <li>"entity": {
+                                <ul class="sin-viñetas">
+                                    <li>"risk_level": 0,</li>
+                                    <li>"risk_score": 0,</li>
+                                    <li>"signed_risk": "string",</li>
+                                    <li>"request_id": "string",</li>
+                                    <li>"severity": "string",</li>
+                                    <li>"enforce_auto_block": true</li>
+                                    <li>}</li>
+                                </ul>
+                                <li>}</li>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>}</li>
+                </ul>
+                <h6>Schema</h6>
+                <h6>GeneralResponseResult {</h6>
+                <ul class="sin-viñetas">
+                    <li>status EResult integer($int32)
+                        <ul class="sin-viñetas">
+                            <li>Enum:</li>
+                            <li>[1, 2, 3, 4, 5]</li>
+                        </ul>
+                    </li>
+                    <li>message string
+                        <ul class="sin-viñetas">
+                            <li>nullable: true</li>
+                        </ul>
+                    </li>
+                    <li>response <strong>GeneralResponse</strong> {
+                        <ul class="sin-viñetas">
+                            <li>status	string
+                                <ul class="sin-viñetas">
+                                    <li>nullable: true</li>
+                                </ul>
+                            </li>
+                            <li>entity <strong>Entity</strong> {
+                                <ul class="sin-viñetas">
+                                    <li>risk_level	integer($int32)</li>
+                                    <li>risk_score	integer($int32)</li>
+                                    <li>signed_risk	string
+                                        <ul class="sin-viñetas">
+                                            <li>nullable: true</li>
+                                        </ul>
+                                    </li>
+                                    <li>request_id	string
+                                        <ul class="sin-viñetas">
+                                            <li>nullable: true</li>
+                                        </ul>
+                                    </li>
+                                    <li>severity	string
+                                        <ul class="sin-viñetas">
+                                            <li>nullable: true</li>
+                                        </ul>
+                                    </li>
+                                    <li>enforce_auto_block	boolean</li>
+                                    <li>}</li>
+                                </ul>
+                            </li>
+                            <li>}</li>
+                        </ul>
+                    </li>
+                    <li>}</li>
+                </ul>
+                <hr>
+                <br>
+                <h3>Exception codes</h3>
+                <h4>400 Bad Request</h4>
+                <h6>Example value</h6>
+                <ul class="sin-viñetas">
+                    <li>{</li>
+                    <li>"Status": 1,</li>
+                    <li>"Message": "string",</li>
+                    <li>"Response": "string"</li>
+                    <li>}</li>
+                </ul>
+                <h6>Schema</h6>
+                <h6>ObjectResult {</h6>
+                <ul class="sin-viñetas">
+                    <li>status EResult integer($int32)</li>
+                    <ul class="sin-viñetas">
+                        <li>Enum:
+                            <ul class="sin-viñetas">
+                                <li>[1, 2, 3, 4, 5]</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li>message string
+                        <ul class="sin-viñetas">
+                            <li>nullable: true</li>
+                        </ul>
+                    </li>
+                    <li>response {</li>
+                    <ul class="sin-viñetas">
+                        <li>}</li>
+                        <li>nullable: true</li>
+                    </ul>
+                    <li>}</li>
+                </ul>
+                <br>
+                <h4>401 Unahthorized</h4>
+                <h6>Example value</h6>
+                <ul class="sin-viñetas">
+                    <li>{</li>
+                    <li>"Status": 1,</li>
+                    <li>"Message": "string",</li>
+                    <li>"Response": "string"</li>
+                    <li>}</li>
+                </ul>
+                <h6>Schema</h6>
+                <h6>ObjectResult {</h6>
+                    <ul class="sin-viñetas">
+                        <li>status EResult integer($int32)</li>
+                        <ul class="sin-viñetas">
+                            <li>Enum:
+                                <ul class="sin-viñetas">
+                                    <li>[1, 2, 3, 4, 5]</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <li>message string
+                            <ul class="sin-viñetas">
+                                <li>nullable: true</li>
+                            </ul>
+                        </li>
+                        <li>response {</li>
+                        <ul class="sin-viñetas">
+                            <li>}</li>
+                            <li>nullable: true</li>
+                        </ul>
+                        <li>}</li>
+                    </ul>
+                <br>
+                <h4>500 Server Error</h4>
+                <h6>Example value</h6>
+                <ul class="sin-viñetas">
+                    <li>{</li>
+                    <li>"Status": 1,</li>
+                    <li>"Message": "string",</li>
+                    <li>"Response": "string"</li>
+                    <li>}</li>
+                </ul>
+                <h6>Schema</h6>
+                <h6>ObjectResult {</h6>
+                    <ul class="sin-viñetas">
+                        <li>status EResult integer($int32)</li>
+                        <ul class="sin-viñetas">
+                            <li>Enum:
+                                <ul class="sin-viñetas">
+                                    <li>[1, 2, 3, 4, 5]</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <li>message string
+                            <ul class="sin-viñetas">
+                                <li>nullable: true</li>
+                            </ul>
+                        </li>
+                        <li>response {</li>
+                        <ul class="sin-viñetas">
+                            <li>}</li>
+                            <li>nullable: true</li>
+                        </ul>
+                        <li>}</li>
+                    </ul>
+            </div>
+        </main>
+    <hr>
+    <br>
+</body>
+<footer class="text-center">
+    <div class="mb-2">
+        <small>
+            © 2024 ID Factory
+        </small>
+    </div>
+</footer>
+</div>
+<!-- page-wrapper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
