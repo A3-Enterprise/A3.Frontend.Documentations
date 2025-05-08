@@ -257,7 +257,7 @@
         <!-- sidebar-wrapper  -->
         <main class="page-content">
             <div class="container-fluid">
-                <h2><span class="badge badge-pill badge-primary">GET</span> FindByNumberIdSuccess</h2>
+                <h2><span class="badge badge-pill badge-success">POST</span> Login</h2>
                 <hr>
                 <h3>Request</h3>
                 <div class="form-group col-md-12">
@@ -270,31 +270,98 @@
                             <th>Values</th>
                         </tr>
                         <tr>
-                            <td>SubCustomer</td>
+                            <td>subCustomer</td>
                             <td>string</td>
                             <td>Yes</td>
                             <td>Defines the name of the subclient configured on the platform</td>
                             <td>Text string</td>
                         </tr>
+                    </table>
+                        <h4>session</h4>
+                        <table id="glosary">
                         <tr>
-                            <td>identificationNumber</td>
+                            <td>idSession</td>
                             <td>string</td>
-                            <td>Yes</td>
-                            <td>Person identification number</td>
+                            <td></td>
+                            <td>The web session the user is in</td>
                             <td>Text string</td>
                         </tr>
                         <tr>
-                            <td>identificationType</td>
+                            <td>timeSession</td>
                             <td>integer($int32)</td>
-                            <td>Yes</td>
-                            <td>Identifier of the type of document registered on the platform</td>
-                            <td>Returns an Integer</td>
+                            <td></td>
+                            <td>The timestamp when the session was issued in Unix epoch format</td>
+                            <td>Text string</td>
                         </tr>
                         <tr>
-                            <td>Authorization</td>
+                            <td>channel</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>User channel, web or mobile</td>
+                            <td>Text string</td>
+                        </tr>
+                    </table>
+                    <h3>login</h3>
+                    <h4>user</h4>
+                        <table id="glosary">
+                        <tr>
+                            <td>user_id</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>A unique identifier of the user, as given by the app</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>User email</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>userFullName</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>User's full name</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>userName</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>User name</td>
+                            <td>Text string</td>
+                        </tr>
+                        <tr>
+                            <td>checkpoint_type</td>
                             <td>string</td>
                             <td>Yes</td>
-                            <td>This field receive a bearer token for authentication,bearer token </td>
+                            <td>The type of checkpoint to invoke</td>
+                            <td>Text string</td>
+                        </tr>
+                        </table>
+                        <h4>webParams</h4>
+                        <table id="glosary">
+                        <tr>
+                            <td>checkpoint</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>ndicates the request's relevant checkpoint</td>
+                            <td>'LOGIN', 'REGISTER', 'TRANSACTION' or 'ADD_PAYMENT_METHOD'
+                                Supported Checkpoints list will be deliverd upon integration.</td>
+                        </tr>
+                        <tr>
+                            <td>version</td>
+                            <td>number($double)</td>
+                            <td></td>
+                            <td>The API version invoked</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>user_id</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>User identification number.</td>
                             <td>Text string</td>
                         </tr>
                     </table>
@@ -302,14 +369,45 @@
                 <hr>
                 <h3>Example</h3>
                 <ul class="sin-viñetas">
-                    <li>curl -X GET \</li>
-                    <li>'https://sandbox.idfactory.me/Identities/api/FindByNumberIdSuccess?identificationNumber=15467&identificationType=1'
-                        \</li>
+                    <li>curl -X POST \</li>
+                    <li>'https://sandbox.idfactory.me/TransactionFraud/api/Login' \</li>
                     <li>-H 'accept: application/json' \</li>
-                    <li>-H 'SubCustomer: Subcustomer name' \'</li>
-                    <li>-H 'Authorization: bearer
-                        dvG1N7fMf8ZMBTBdwfbRi-S6uPlXBDnsxc43s-umMOBnzLth3OVu_q0eRXHx1I_0-CnXhEqF_FDsBuZ9YxUIOWLClKD60sMyLSB7OGJCMd25zk80E4DRSLIwfY0v2uRBsvLUHFbsUuo-Ze00KJYLLwTb4xVNZXDLOtWdrxN2yorDLNOkoiCnW98q9cISTa4qp8QrpjTe_YFEP2syEmIOz-ngBK2J2Da8Ld2Zx16AC6jLkBAEGHGj_BuqbE_45gct1gw_7cCfoQ0cHvt2Y-FGnzx0hiIYoFavH-fN20pSwi4yaFNEfw2l9gyvLPfEUo3-PdSvuEzAgpqa2OZ1v0Qi0A'
-                        \</li>
+                    <li>-H 'Authorization: Bearer AKFGBAERUIPG65465' \</li>
+                    <li>-H 'Content-Type: application/json' \</li>
+                    <li>-d '{</li>
+                    <li>"subCustomer": "string",</li>
+                    <li>"session": {
+                        <ul class="sin-viñetas">
+                            <li>"idSession": "string",</li>
+                            <li>"timeSession": 0,</li>
+                            <li>"channel": "string"</li>
+                        </ul>
+                        <li>},</li>
+                    </li>
+                    <li>"login": {
+                        <ul class="sin-viñetas">
+                            <li>"user": {
+                                <ul class="sin-viñetas">
+                                    <li>"user_id": "string",</li>
+                                    <li>"email": "string",</li>
+                                    <li>"userFullName": "string",</li>
+                                    <li>"userName": "string"</li>
+                                    <li>},</li>
+                                </ul>
+                            </li>
+                            <li>"checkpoint_type": "string"</li>
+                            <li>},</li>
+                        </ul>
+                    </li>
+                    <li>"webParams": {
+                        <ul class="sin-viñetas">
+                            <li>"checkpoint": "string",</li>
+                            <li>"version": 0,</li>
+                            <li>"user_id": "string"</li>
+                            <li>}</li>
+                        </ul>
+                    </li>
+                    <li>}'</li>
                 </ul>
                 <p style="color: blue"><strong>Note</strong>:
                 <ul>
@@ -328,29 +426,28 @@
                     <li>{</li>
                     <li>"Status": 1,</li>
                     <li>"Message": "string",</li>
-                    <li>"Response": [</li>
+                    <li>"Response": {</li>
                     <ul class="sin-viñetas">
-                        <li>{</li>
-                        <li>"id": 0,</li>
-                        <li>"names": "string",</li>
-                        <li>"surnames": "string",</li>
-                        <li>"identificationNumber": "string",</li>
-                        <li>"email": "string",</li>
-                        <li>"numberPhone": "string",</li>
-                        <li>"state": 0,</li>
-                        <li>"customerId": 0,</li>
-                        <li>"subProjectId": 0,</li>
-                        <li>"subProjectName": "string",</li>
-                        <li>"anonybitUserId": "string"</li>
+                        <li>"status": "string",</li>
+                        <li>"entity": {
+                            <ul class="sin-viñetas">
+                                <li>"risk_level": 0,</li>
+                                <li>"risk_score": 0,</li>
+                                <li>"signed_risk": "string",</li>
+                                <li>"request_id": "string",</li>
+                                <li>"severity": "string",</li>
+                                <li>"enforce_auto_block": true</li>
+                                <li>}</li>
+                            </ul>
+                        </li>
                         <li>}</li>
                     </ul>
-                    <li>]</li>
                     <li>}</li>
                 </ul>
                 <h6>Schema</h6>
-                <h6>IdentityModelListResult {</h6>
+                <h6>GeneralResponseResult {</h6>
                 <ul class="sin-viñetas">
-                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
+                    <li>status EResult integer($int32)</li>
                     <ul class="sin-viñetas">
                         <li>Enum:</li>
                         <li>[1, 2, 3, 4, 5]</li>
@@ -359,47 +456,36 @@
                     <ul class="sin-viñetas">
                         <li>nullable: true</li>
                     </ul>
-                    <li>response [</li>
+                    <li>response <strong>GeneralResposne</strong>{</li>
                     <ul class="sin-viñetas">
-                        <li>nullable: true</li>
-                        <li>
-                            <h6>IdentityModel {</h6>
+                        <li>status	string
+                            <ul class="sin-viñetas">
+                                <li>nullable: true</li>
+                            </ul>
                         </li>
+                        <li>entity <strong>Entity</strong>{</li>
                         <ul class="sin-viñetas">
-                            <li>id integer($int32)</li>
-                            <li>names string</li>
-                            <ul class="sin-viñetas">
-                                <li>nullable: true</li>
-                            </ul>
-                            <li>surnames string</li>
-                            <ul class="sin-viñetas">
-                                <li>nullable: true</li>
-                            </ul>
-                            <li>identificationNumber string</li>
-                            <ul class="sin-viñetas">
-                                <li>nullable: true</li>
-                            </ul>
-                            <li>email string</li>
-                            <ul class="sin-viñetas">
-                                <li>nullable: true</li>
-                            </ul>
-                            <li>numberPhone string</li>
-                            <ul class="sin-viñetas">
-                                <li>nullable: true</li>
-                            </ul>
-                            <li>state integer($int32)</li>
-                            <li>customerId integer($int32)</li>
-                            <li>subProjectId integer($int32)</li>
-                            <li>subProjectName string</li>
-                            <ul class="sin-viñetas">
-                                <li>nullable: true</li>
-                            </ul>
-                            <li>anonybitUserId string</li>
-                            <ul class="sin-viñetas">
-                                <li>nullable: true</li>
-                            </ul>
+                            <li>risk_level	integer($int32)</li>
+                            <li>risk_score	integer($int32)</li>
+                            <li>signed_risk	string
+                                <ul class="sin-viñetas">
+                                    <li>nullable: true</li>
+                                </ul>
+                            </li>
+                            <li>request_id	string
+                                <ul class="sin-viñetas">
+                                    <li>nullable: true</li>
+                                </ul>
+                            </li>     
+                            <li>severity	string
+                                <ul class="sin-viñetas">
+                                    <li>nullable: true</li>
+                                </ul>
+                            </li>   
+                            <li>enforce_auto_block	boolean</li>  
+                            <li>}</li>                  
                         </ul>
-                        <li>}]</li>
+                        <li>}</li>
                     </ul>
                     <li>}</li>
                 </ul>
@@ -423,10 +509,11 @@
                         <li>Enum:</li>
                         <li>[1, 2, 3, 4, 5]</li>
                     </ul>
-                    <li>message string</li>
-                    <ul class="sin-viñetas">
-                        <li>nullable: true</li>
-                    </ul>
+                    <li>message string
+                        <ul class="sin-viñetas">
+                            <li>nullable: true</li>
+                        </ul>
+                    </li>
                     <li>response {</li>
                     <ul class="sin-viñetas">
                         <li>}</li>
@@ -446,23 +533,24 @@
                 </ul>
                 <h6>Schema</h6>
                 <h6>ObjectResult {</h6>
-                <ul class="sin-viñetas">
-                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
                     <ul class="sin-viñetas">
-                        <li>Enum:</li>
-                        <li>[1, 2, 3, 4, 5]</li>
-                    </ul>
-                    <li>message string</li>
-                    <ul class="sin-viñetas">
-                        <li>nullable: true</li>
-                    </ul>
-                    <li>response {</li>
-                    <ul class="sin-viñetas">
+                        <li>status EResult integer($int32)</li>
+                        <ul class="sin-viñetas">
+                            <li>Enum:</li>
+                            <li>[1, 2, 3, 4, 5]</li>
+                        </ul>
+                        <li>message string
+                            <ul class="sin-viñetas">
+                                <li>nullable: true</li>
+                            </ul>
+                        </li>
+                        <li>response {</li>
+                        <ul class="sin-viñetas">
+                            <li>}</li>
+                            <li>nullable: true</li>
+                        </ul>
                         <li>}</li>
-                        <li>nullable: true</li>
                     </ul>
-                    <li>}</li>
-                </ul>
                 <br>
                 <h4>500 Server Error</h4>
                 <h6>Example value</h6>
@@ -475,26 +563,26 @@
                 </ul>
                 <h6>Schema</h6>
                 <h6>ObjectResult {</h6>
-                <ul class="sin-viñetas">
-                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
                     <ul class="sin-viñetas">
-                        <li>Enum:</li>
-                        <li>[1, 2, 3, 4, 5]</li>
-                    </ul>
-                    <li>message string</li>
-                    <ul class="sin-viñetas">
-                        <li>nullable: true</li>
-                    </ul>
-                    <li>response {</li>
-                    <ul class="sin-viñetas">
+                        <li>status EResult integer($int32)</li>
+                        <ul class="sin-viñetas">
+                            <li>Enum:</li>
+                            <li>[1, 2, 3, 4, 5]</li>
+                        </ul>
+                        <li>message string
+                            <ul class="sin-viñetas">
+                                <li>nullable: true</li>
+                            </ul>
+                        </li>
+                        <li>response {</li>
+                        <ul class="sin-viñetas">
+                            <li>}</li>
+                            <li>nullable: true</li>
+                        </ul>
                         <li>}</li>
-                        <li>nullable: true</li>
                     </ul>
-                    <li>}</li>
-                </ul>
             </div>
         </main>
-    
     <hr>
     <br>
 </body>

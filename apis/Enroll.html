@@ -227,6 +227,26 @@
                                             <span>NewVoice</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="TransactionFraudRegister.html">
+                                            <span>Fraud Register</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TransactionFraudLogin.html">
+                                            <span>Fraud Login</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TransactionFraudTransaction.html">
+                                            <span>Fraud transaction</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TransactionFraudAddPayMethod.html">
+                                            <span>Fraud Add Pay Method</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -479,9 +499,27 @@
                     <ul class="sin-viñetas">
                         <li>{</li>
                         <ul class="sin-viñetas">
-                            <li>"order": 0,</li>
-                            <li>"step": 1</li>
+                            <li>"order": 1,</li>
+                            <li>"step": "CONSENT"</li>
                         </ul>
+                        <li>},</li>
+                        <li>{</li>
+                            <ul class="sin-viñetas">
+                                <li>"order": 2,</li>
+                                <li>"step": "SELFIE"</li>
+                            </ul>
+                        <li>},</li>
+                        <li>{</li>
+                            <ul class="sin-viñetas">
+                                <li>"order": 3,</li>
+                                <li>"step": "ID"</li>
+                            </ul>
+                        <li>},</li>
+                        <li>{</li>
+                            <ul class="sin-viñetas">
+                                <li>"order": 4,</li>
+                                <li>"step": "VOICE"</li>
+                            </ul>
                         <li>}</li>
                     </ul>
                     <li>],</li>
@@ -555,8 +593,8 @@
                     </ul>
                     <span>steps</span><span style="color: red;">*</span><span><strong> [OrderSteps {</strong></span>
                     <ul class="sin-viñetas">
-                        <span>order</span><span style="color: red;">*</span><span>integer($int32)</span>
-                        <span>step</span><span style="color: red;">*</span><span>EStepsinteger($int32)</span>
+                        <li>order</span><span style="color: red;">* </span><span>integer($int32)</li>
+                        <li>step</span><span style="color: red;">* </span><span>EStepsinteger($int32)</li>
                         <ul class="sin-viñetas">
                             <li>Enum:</li>
                             <ul class="sin-viñetas">
