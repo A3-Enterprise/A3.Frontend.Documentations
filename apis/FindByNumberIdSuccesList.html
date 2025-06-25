@@ -173,6 +173,11 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="FindByNumberIdSuccesList.html">
+                                            <span>FindByNumberIdSuccesList</span>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="Front.html">
                                             <span>Front</span>
                                         </a>
@@ -267,7 +272,7 @@
         <!-- sidebar-wrapper  -->
         <main class="page-content">
             <div class="container-fluid">
-                <h2><span class="badge badge-pill badge-warning">PUT</span> Inactive Identity</h2>
+                <h2><span class="badge badge-pill badge-warning">GET</span> Find By Number Id Succes List</h2>
                 <hr>
                 <h3>Request</h3>
                 <div class="form-group col-md-12">
@@ -306,17 +311,14 @@
                 <hr>
                 <h3>Example</h3>
                 <ul class="sin-viñetas">
-                    <li>curl -X 'PUT' \</li>
-                    <li>'https://sandbox.idfactory.me/Identities/api/Inactive' \</li>
+                    <li>curl -X 'GET' \</li>
+                    <li>'https://sandbox.idfactory.me/Identities/api/FindByNumberIdSuccessList?identificationNumber=UserIdentificationNumber'
+                        \</li>
                     <li>-H 'accept: application/json' \</li>
+                    <li>-H 'SubCustomer: Subcustomer Name' \</li>
                     <li>-H 'Authorization: Bearer
                         eyJhbGciOiJIUzI1NiIsInR5cCI6IkJlYXJlciJ9.eyJuYW1laWQiOiI1NSIsIm5iZiI6MTc0NzA2NzE1NywiZXhwIjoxNzQ3MDcwNzU3LCJpYXQiOjE3NDcwNjcxNTcsImlzcyI6Imh0dHBzOi8vc2FuZGJveC5pZGZhY3RvcnkubWUiLCJhdWQiOiJodHRwczovL3NhbmRib3guaWRmYWN0b3J5Lm1lIn0.O7Jh7LgfA__jqryHF7Htcz8XpR7IdqSSIqlVYq0b7Qo'
                         \</li>
-                    <li>-H 'Content-Type: application/json' \</li>
-                    <li>-d '{</li>
-                    <li>"subCustomer": "scamnetic",</li>
-                    <li>"identificationNumber": "1030648319"</li>
-                    <li>}'</li>
                 </ul>
                 <hr>
                 <br>
@@ -326,11 +328,28 @@
                     <li>{</li>
                     <li>"status": 1,</li>
                     <li>"message": "string",</li>
-                    <li>"response": 0</li>
+                    <li>"response": [
+                        <ul class="sin-viñetas">
+                            <li>{</li>
+                            <li>"id": 0,</li>
+                            <li>"names": "string",</li>
+                            <li>"surnames": "string",</li>
+                            <li>"identificationNumber": "string",</li>
+                            <li>"email": "string",</li>
+                            <li>"numberPhone": "string",</li>
+                            <li>"state": 0,</li>
+                            <li>"customerId": 0,</li>
+                            <li>"subProjectId": 0,</li>
+                            <li>"subProjectName": "string",</li>
+                            <li>"anonybitUserId": "string"</li>
+                            <li>}</li>
+                        </ul>
+                    </li>
+                    <li>]</li>
                     <li>}</li>
                 </ul>
                 <h6>Schema</h6>
-                <h6>Int32Result {</h6>
+                <h6>IdentityModelListResult {</h6>
                 <ul class="sin-viñetas">
                     <li>status <strong>EResult</strong> integer($int32)</li>
                     <ul class="sin-viñetas">
@@ -341,7 +360,46 @@
                     <ul class="sin-viñetas">
                         <li>nullable: true</li>
                     </ul>
-                    <li>response integer($int32)</li>
+                    <li>response [</li>
+                    <ul class="sin-viñetas">
+                        <li>nullable: true</li>
+                        <li><strong>IdentityModel {</strong></li>
+                        <ul class="sin-viñetas">
+                            <li>id integer($int32)</li>
+                            <li>names string</li>
+                            <ul class="sin-viñetas">
+                                <li>nullable: true</li>
+                            </ul>
+                            <li>surnames string</li>
+                            <ul class="sin-viñetas">
+                                <li>nullable: true</li>
+                            </ul>
+                            <li>identificationNumber string</li>
+                            <ul class="sin-viñetas">
+                                <li>nullable: true</li>
+                            </ul>
+                            <li>email string</li>
+                            <ul class="sin-viñetas">
+                                <li>nullable: true</li>
+                            </ul>
+                            <li>numberPhone string</li>
+                            <ul class="sin-viñetas">
+                                <li>nullable: true</li>
+                            </ul>
+                            <li>state integer($int32)</li>
+                            <li>customerId integer($int32)</li>
+                            <li>subProjectId integer($int32)</li>
+                            <li>subProjectName string</li>
+                            <ul class="sin-viñetas">
+                                <li>nullable: true</li>
+                            </ul>
+                            <li>anonybitUserId string</li>
+                            <ul class="sin-viñetas">
+                                <li>nullable: true</li>
+                            </ul>
+                        </ul>
+                        <li>}]</li>
+                    </ul>
                     <li>}</li>
                 </ul>
                 <hr>
