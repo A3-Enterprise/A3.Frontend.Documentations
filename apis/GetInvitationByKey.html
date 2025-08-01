@@ -44,14 +44,11 @@
                             <a href="#">
                                 <i class="fa fa-circle"></i>
                                 <span>Enroll</span>
-                                <!-- <span class="badge badge-pill badge-warning">New</span> -->
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="../flujos/FlujoGeneralEnroll.html">General
-                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
-                                        </a>
+                                        <a href="../flujos/FlujoGeneralEnroll.html">General</a>
                                     </li>
                                     <li>
                                         <a href="../flujos/FlujoGeneralEnrollEcuador.html">Ecuador</a>
@@ -66,7 +63,6 @@
                             <a href="../flujos/Verify.html">
                                 <i class="fa fa-circle"></i>
                                 <span>Verify</span>
-                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
                             </a>
                         </li>
                         <li class="header-menu">
@@ -76,23 +72,15 @@
                             <a href="#">
                                 <i class="fa fa-square"></i>
                                 <span>Enroll</span>
-                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="../flujos/flujoGeneralWebIdFactory.html">IdFactory Web page 
-                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
-                                        </a>
+                                        <a href="../flujos/flujoGeneralWebIdFactory.html">IdFactory Web page</a>
                                     </li>
                                     <li>
-                                        <a href="../flujos/flujoGeneralWebCustomer.html">Integration by routine
-                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
-                                        </a>
+                                        <a href="../flujos/flujoGeneralWebCustomer.html">Integration by routine</a>
                                     </li>
-                                    <!--<li>
-                                        <a href="../flujos/EcuadorWeb.html">Components for web page</a>
-                                    </li>-->
                                 </ul>
                             </div>
                         </li>
@@ -100,14 +88,11 @@
                             <a href="#">
                                 <i class="fa fa-square"></i>
                                 <span>Verify</span>
-                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="../flujos/FlujoComponentesImagenesVerify.html">Verify web page
-                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
-                                        </a>
+                                        <a href="../flujos/FlujoComponentesImagenesVerify.html">Verify web page</a>
                                     </li>
                                 </ul>
                             </div>
@@ -119,14 +104,11 @@
                             <a href="#">
                                 <i class="fa fa-book"></i>
                                 <span>User Manuals</span>
-                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="../manuales/ENAdministrator.html">Administrator Rol Manual
-                                            <!-- <span class="badge badge-pill badge-success">Pro</span> -->
-                                        </a>
+                                        <a href="../manuales/ENAdministrator.html">Administrator Rol Manual</a>
                                     </li>
                                     <li>
                                         <a href="../manuales/ENQuery.html">Query Rol Manual</a>
@@ -150,14 +132,12 @@
                             <a href="#">
                                 <i class="fa fa-book"></i>
                                 <span>Api's</span>
-                                <!-- <span class="badge badge-pill badge-danger">3</span> -->
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
                                         <a href="AuthorizationGetToken.html">
-                                            <span>GetToken</span>
-                                            <!--<span class="badge badge-pill badge-primary">Beta</span> -->
+                                            <span>AuthorizationGetToken</span>
                                         </a>
                                     </li>
                                     <li>
@@ -273,7 +253,6 @@
                                 </ul>
                             </div>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -281,61 +260,56 @@
         <!-- sidebar-wrapper  -->
         <main class="page-content">
             <div class="container-fluid">
-                <h2><span class="badge badge-pill badge-success">POST</span> GetToken</h2>
+                <h2><span class="badge badge-pill badge-primary">GET</span> GetInvitationByKey</h2>
                 <hr>
+                <p>Retrieves invitation details by providing a specific invitation key.</p>
                 <h3>Request</h3>
                 <div class="form-group col-md-12">
                     <table id="glosary">
                         <tr>
                             <th>Field</th>
                             <th>Type</th>
+                            <th>Location</th>
                             <th>Required</th>
                             <th>Description</th>
-                            <th>Values</th>
                         </tr>
                         <tr>
-                            <td>grant_type</td>
+                            <td>SubCustomer</td>
                             <td>string</td>
+                            <td>Header</td>
                             <td>Yes</td>
-                            <td>Type of autorization</td>
-                            <td>Insert word: "Password"</td>
+                            <td>Sub customer identifier</td>
                         </tr>
                         <tr>
-                            <td>username</td>
+                            <td>key</td>
                             <td>string</td>
-                            <td>No</td>
-                            <td>Receives the configured username or Sub Customer</td>
-                            <td>Text string</td>
-                        </tr>
-                        <tr>
-                            <td>password</td>
-                            <td>string</td>
-                            <td>No</td>
-                            <td>Password associated with the user or sub customer in SHA1 format</td>
-                            <td>Text string</td>
+                            <td>Query Parameter</td>
+                            <td>Yes</td>
+                            <td>Unique invitation key identifier</td>
                         </tr>
                         <tr>
                             <td>Authorization</td>
                             <td>string</td>
+                            <td>Header</td>
                             <td>Yes</td>
-                            <td>This field receive a bearer token for authentication,bearer token </td>
-                            <td>Text string</td>
+                            <td>Bearer token for authentication</td>
                         </tr>
                     </table>
                 </div>
                 <hr>
                 <h3>Example</h3>
                 <ul class="sin-viñetas">
-                    <li>curl -x \ 'https://sandbox.idfactory.me/Authorization/api/GetToken'
-                        \</li>
+                    <li>curl -X 'GET' \</li>
+                    <li>'https://sandbox.idfactory.me/Invitations/api/GetInvitationByKey?key=invitationKey' \</li>
                     <li>-H 'accept: application/json' \</li>
-                    <li>-H 'Content-Type: application/x-www-form-urlencoded' \</li>
-                    <li>-d 'grant_type=password&username=USERNAME&password=SHA1PASSWORD'</li>
+                    <li>-H 'SubCustomer: SubCustomerName' \</li>
+                    <li>-H 'Authorization: bearer TOKEN'</li>
                 </ul>
                 <p style="color: blue"><strong>Note</strong>:
                 <ul>
-                    <li style="color: blue">In the "USERNAME field replace with your username.</li>
-                    <li style="color: blue">In the "SHA1PASSWORD" field replace with the password in SHA1 format.</li>
+                    <li style="color: blue">Replace "SubCustomerName" with your actual SubCustomer Name.</li>
+                    <li style="color: blue">Replace "TOKEN" with your actual bearer token.</li>
+                    <li style="color: blue">Replace the key parameter with the actual invitation key.</li>
                 </ul>
                 </p>
                 <hr>
@@ -344,89 +318,56 @@
                 <h6>Example value</h6>
                 <ul class="sin-viñetas">
                     <li>{</li>
-                    <li>"Status": 1,</li>
-                    <li>"Message": "string",</li>
-                    <li>"Response": {
+                    <li>"status": 1,</li>
+                    <li>"message": "SUCCESS",</li>
+                    <li>"response": {
                         <ul>
-                            <li>"userId": 0,</li>
-                            <li>"username": "string",</li>
-                            <li>"issuedAt": "2024-11-01T22:15:59.120Z",</li>
-                            <li>"expires": "2024-11-01T22:15:59.120Z",</li>
-                            <li>"tokenType": "string",</li>
-                            <li>"token": "string"</li>
+                            <li>"id": 16750,</li>
+                            <li>"startDate": "2025-08-01T16:17:18",</li>
+                            <li>"finishDate": "2025-08-08T16:17:18",</li>
+                            <li>"link": "https://EnrollSandbox.idfactory.me/enroll?SubCustomer=SubCustomerName&key=InvitationKey",</li>
+                            <li>"key": "InvitationKey",</li>
+                            <li>"automaticAuthorization": false,</li>
+                            <li>"authenticationInsite": false,</li>
+                            <li>"state": 1,</li>
+                            <li>"subCustomerId": 68,</li>
+                            <li>"email": "",</li>
+                            <li>"callBack": "https://api-dev.com/ideveryone/biometric/callback/...",</li>
+                            <li>"numberPhone": null,</li>
+                            <li>"isEmployee": false,</li>
+                            <li>"isOpen": true,</li>
+                            <li>"templatesIds": [],</li>
+                            <li>"steps": [
+                                <ul>
+                                    <li>{</li>
+                                    <li>"order": 1,</li>
+                                    <li>"step": 1</li>
+                                    <li>}</li>
+                                </ul>
+                                ],
+                            </li>
+                            <li>"urlEnrolInsite": null,</li>
+                            <li>"csid": null,</li>
+                            <li>"otp": null,</li>
+                            <li>"riskId": 0,</li>
+                            <li>"qr": "iVBORw0KGgoAAAANSUhEUgAAAmIAAAJiCAYAAABkVq7m...",</li>
+                            <li>"getLocation": 1,</li>
+                            <li>"type": 1,</li>
+                            <li>"personId": null</li>
                         </ul>
                         }
                     </li>
                     <li>}</li>
                 </ul>
-                <h6>Schema</h6>
-                <h6>AuthResModelResult {</h6>
-                <ul class="sin-viñetas">
-                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
-                    <ul class="sin-viñetas">
-                        <li>Enum:</li>
-                        <li>[1, 2, 3, 4, 5, 6, 7]</li>
-                    </ul>
-                    <li>message string</li>
-                    <ul class="sin-viñetas">
-                        <li>nullable: true</li>
-                    </ul>
-                    <li>response <strong>AuthResModel</strong> {</li>
-                    <ul class="sin-viñetas">
-                        <li>userId integer($int32)</li>
-                        <li>username string</li>
-                        <ul class="sin-viñetas">
-                            <li>nullable: true</li>
-                        </ul>
-                        <li>issuedAt string($date-time)</li>
-                        <ul class="sin-viñetas">
-                            <li>nullable: true</li>
-                        </ul>
-                        <li>expires string($date-time)</li>
-                        <ul class="sin-viñetas">
-                            <li>nullable: true</li>
-                        </ul>
-                        <li>tokenType string</li>
-                        <ul class="sin-viñetas">
-                            <li>nullable: true</li>
-                        </ul>
-                        <li>token string</li>
-                        <ul class="sin-viñetas">
-                            <li>nullable: true</li>
-                        </ul>
-                        <li>}</li>
-                    </ul>
-                    <li>}</li>
-                </ul>
                 <hr>
-                <br>
                 <h3>Exception codes</h3>
                 <h4>400 Bad Request</h4>
                 <h6>Example value</h6>
                 <ul class="sin-viñetas">
                     <li>{</li>
-                    <li>"Status": 1,</li>
-                    <li>"Message": "string",</li>
-                    <li>"Response": "string"</li>
-                    <li>}</li>
-                </ul>
-                <h6>Schema</h6>
-                <h6>ObjectResult {</h6>
-                <ul class="sin-viñetas">
-                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
-                    <ul class="sin-viñetas">
-                        <li>Enum:</li>
-                        <li>[1, 2, 3, 4, 5, 6, 7]</li>
-                    </ul>
-                    <li>message string</li>
-                    <ul class="sin-viñetas">
-                        <li>nullable: true</li>
-                    </ul>
-                    <li>response {</li>
-                    <ul class="sin-viñetas">
-                        <li>}</li>
-                        <li>nullable: true</li>
-                    </ul>
+                    <li>"status": 2,</li>
+                    <li>"message": "Database connection not recovery",</li>
+                    <li>"response": null</li>
                     <li>}</li>
                 </ul>
                 <br>
@@ -434,29 +375,9 @@
                 <h6>Example value</h6>
                 <ul class="sin-viñetas">
                     <li>{</li>
-                    <li>"Status": 1,</li>
-                    <li>"Message": "string",</li>
-                    <li>"Response": "string"</li>
-                    <li>}</li>
-
-                </ul>
-                <h6>Schema</h6>
-                <h6>ObjectResult {</h6>
-                <ul class="sin-viñetas">
-                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
-                    <ul class="sin-viñetas">
-                        <li>Enum:</li>
-                        <li>[1, 2, 3, 4, 5, 6, 7]</li>
-                    </ul>
-                    <li>message string</li>
-                    <ul class="sin-viñetas">
-                        <li>nullable: true</li>
-                    </ul>
-                    <li>response {</li>
-                    <ul class="sin-viñetas">
-                        <li>}</li>
-                        <li>nullable: true</li>
-                    </ul>
+                    <li>"status": 2,</li>
+                    <li>"message": "Unauthorized access",</li>
+                    <li>"response": null</li>
                     <li>}</li>
                 </ul>
                 <br>
@@ -464,35 +385,16 @@
                 <h6>Example value</h6>
                 <ul class="sin-viñetas">
                     <li>{</li>
-                    <li>"Status": 1,</li>
-                    <li>"Message": "string",</li>
-                    <li>"Response": "string"</li>
-                    <li>}</li>
-
-                </ul>
-                <h6>Schema</h6>
-                <h6>ObjectResult {</h6>
-                <ul class="sin-viñetas">
-                    <li>status <strong>EResult</strong> EResult integer($int32)</li>
-                    <ul class="sin-viñetas">
-                        <li>Enum:</li>
-                        <li>[1, 2, 3, 4, 5, 6, 7]</li>
-                    </ul>
-                    <li>message string</li>
-                    <ul class="sin-viñetas">
-                        <li>nullable: true</li>
-                    </ul>
-                    <li>response {</li>
-                    <ul class="sin-viñetas">
-                        <li>}</li>
-                        <li>nullable: true</li>
-                    </ul>
+                    <li>"status": 2,</li>
+                    <li>"message": "Internal server error",</li>
+                    <li>"response": null</li>
                     <li>}</li>
                 </ul>
                 <br>
                 <hr>
             </div>
         </main>
+    </div>
 </body>
 <footer class="text-center">
     <div class="mb-2">
@@ -501,6 +403,6 @@
         </small>
     </div>
 </footer>
-</div>
 <!-- page-wrapper -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</html>
