@@ -67,7 +67,7 @@
                     <li>curl -X \</li>
                     <li> 'https://sandbox.idfactory.me/Enroll/api/Close' \</li>
                     <li>-H 'accept: application/json' \</li>
-                    <li>-H 'subCustomer: CajaMetropolitanaSubCustomerQA' \</li>
+                    <li>-H 'subCustomer: SubCustomerName' \</li>
                     <li>-H 'uid: FC3C8FB492DF4BFB82E59448051FDF7812072024014614640' \</li>
                     <li>-H 'authorization: bearer
                         gIAE8XbkJAgTakwCvFFA-50qXeDJLa9rqP1aQydozHSLf0fQXd82Xwbnxq_MqIsggs0t2S2QhDzXFil23C2fv8-glZM4KtS-AYha1zSJG9sZGk9Gvlm82Cayp7I8Pq3D7C1xU0pa0ywvBs35AadeqaWATyu_eVF-TR8yangNNm_chcm6LKloRE8YTjdSD_cletxE80gtIxhiEAlAeyonoGJXXnGuD2kTlTQStSNWPWnUvEHAjwPin2fZybKKWM6eRZRPoD6ftXiXhre25-8eZZ8eumkulA0UJlGrKvwRPL9vdPWujo4junPo2W3tD_L0ApKvDybBarBMZz7SKZypZA'
@@ -87,9 +87,55 @@
                     <li>{</li>
                     <li>"Status": 1,</li>
                     <li>"Message": "string",</li>
-                    <li>"Response": "string"</li>
+                    <li>"Response": {
+                        <ul>
+                            <li>"Id": integer, <span style="color: red;">*</span></li>
+                            <li>"Uid": "string",</li>
+                            <li>"StartingDate": "datetime",</li>
+                            <li>"FinishDate": "datetime",</li>
+                            <li>"TransactionStateId": integer,</li>
+                            <li>"InvitationId": integer,</li>
+                            <li>"PersonId": integer,</li>
+                            <li>"TransactionTypeId": integer,</li>
+                            <li>"Email": "string",</li>
+                            <li>"NumberPhone": "string",</li>
+                            <li>"CustomerAddress": "string",</li>
+                            <li>"PONumber": "string",</li>
+                            <li>"TrailerNumber": "string",</li>
+                            <li>"TruckNumber": "string",</li>
+                            <li>"EventType": "string",</li>
+                            <li>"SubProjectName": "string",</li>
+                            <li>"DataBinding": "string",</li>
+                            <li>"OTP": "string",</li>
+                            <li>"Csid": "string",</li>
+                            <li>"DeviceId": integer,</li>
+                            <li>"TransactionScore": "string",</li>
+                            <li>"Action": "string",</li>
+                            <li>"FirstName": "string",</li>
+                            <li>"SecondName": "string",</li>
+                            <li>"FirstSurname": "string",</li>
+                            <li>"SecondSurname": "string",</li>
+                            <li>"Age": integer,</li>
+                            <li>"IdentificationNumber": "string",</li>
+                            <li>"ErrorMessage": "string", <span style="color: red;">*</span></li>
+                            <li>"Pending": boolean, <span style="color: red;">*</span></li>
+                            <li>"Approved": boolean, <span style="color: red;">*</span></li>
+                            <li>"NotApproved": boolean, <span style="color: red;">*</span></li>
+                            <li>"ResultComparationFaces": float,</li>
+                            <li>"ThresholdComparationFaces": float,</li>
+                            <li>"AnonybitToken": "string",</li>
+                            <li>"AnonybitDeviceToken": "string",</li>
+                            <li>"IdentificationTypeId": integer,</li>
+                            <li>"IdentificationType": "string",</li>
+                            <li>"BirthDate": "datetime",</li>
+                            <li>"ExpirationDate": "datetime",</li>
+                            <li>"DocExpired": boolean</li>
+                        </ul>
+                        }
+                    </li>
                     <li>}</li>
                 </ul>
+                <p style="color: red;"><strong>Note</strong>: Fields marked with * are always returned in the response. Other fields are dynamic and may be null or omitted.</p>
                 <h6>Schema</h6>
                 <h6>StringResult {</h6>
                 <ul class="sin-viñetas">
@@ -116,9 +162,9 @@
                 <h6>Example value</h6>
                 <ul class="sin-viñetas">
                     <li>{</li>
-                    <li>"Status": 1,</li>
-                    <li>"Message": "string",</li>
-                    <li>"Response": "string"</li>
+                    <li>"Status": 2,</li>
+                    <li>"Message": "Bad Request",</li>
+                    <li>"Response": null</li>
                     <li>}</li>
                 </ul>
                 <h6>Schema</h6>
@@ -141,13 +187,13 @@
                     <li>}</li>
                 </ul>
                 <br>
-                <h4>401 Unahthorized</h4>
+                <h4>401 Unauthorized</h4>
                 <h6>Example value</h6>
                 <ul class="sin-viñetas">
                     <li>{</li>
-                    <li>"Status": 1,</li>
-                    <li>"Message": "string",</li>
-                    <li>"Response": "string"</li>
+                    <li>"Status": 2,</li>
+                    <li>"Message": "Unauthorized",</li>
+                    <li>"Response": null</li>
                     <li>}</li>
                 </ul>
                 <h6>Schema</h6>
@@ -174,9 +220,9 @@
                 <h6>Example value</h6>
                 <ul class="sin-viñetas">
                     <li>{</li>
-                    <li>"Status": 1,</li>
-                    <li>"Message": "string",</li>
-                    <li>"Response": "string"</li>
+                    <li>"Status": 2,</li>
+                    <li>"Message": "Internal Server Error",</li>
+                    <li>"Response": null</li>
                     <li>}</li>
                 </ul>
                 <h6>Schema</h6>
